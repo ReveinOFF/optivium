@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("Home");
+  const t = await getTranslations("NotFound");
   const pathname = (await headers()).get("x-pathname") as string;
 
   return {
@@ -37,8 +37,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function Home() {
-  const t = await getTranslations("Home");
+export default async function NotFound() {
+  const t = await getTranslations("NotFound");
 
   return <div></div>;
 }
