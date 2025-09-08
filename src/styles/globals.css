@@ -1,4 +1,51 @@
 @import "tailwindcss";
 
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+} */
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+* {
+  /* scrollbar-width: thin; */
+  /* scrollbar-color: #444 #1a1a1a; */
+  @apply box-border;
+}
+html {
+  color-schema: dark;
+}
 body {
+  @apply font-[Inter] w-screen;
+}
+main {
+  width: inherit;
+}
+button {
+  @apply cursor-pointer;
+}
+button,
+a {
+  /* @apply focus-visible:outline-[#4c535a] focus-visible:outline-2; */
+}
+h1-h4 {
+  @apply font-[Exo+2];
+}
+
+.container {
+  @apply px-3 mx-auto;
 }

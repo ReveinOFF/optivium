@@ -1,1 +1,8 @@
-{ "title": "hello ua" }
+{
+  "Home": {
+    "meta": {}
+  },
+  "NotFound": {
+    "meta": {}
+  }
+}

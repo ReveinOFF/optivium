@@ -38,10 +38,10 @@ const nextConfig: NextConfig = {
             key: "Cache-Control",
             value: "no-cache, no-store, must-revalidate",
           },
-          {
-            key: "Content-Security-Policy",
-            value: cspHeader.replace(/\n/g, ""),
-          },
+          // {
+          //   key: "Content-Security-Policy",
+          //   value: cspHeader.replace(/\n/g, ""),
+          // },
           // {
           //   key: "Strict-Transport-Security",
           //   value: "max-age=31536000; includeSubDomains; preload",

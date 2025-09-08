@@ -1,1 +1,8 @@
-{ "title": "hello pl" }
+{
+  "Home": {
+    "meta": {}
+  },
+  "NotFound": {
+    "meta": {}
+  }
+}
