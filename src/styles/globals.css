@@ -38,14 +38,18 @@ main {
 button {
   @apply cursor-pointer;
 }
-button,
-a {
-  /* @apply focus-visible:outline-[#4c535a] focus-visible:outline-2; */
-}
 h1-h4 {
   @apply font-[Exo+2];
 }
 
 .container {
-  @apply px-3 mx-auto;
+  @apply px-3 mx-auto max-w-7xl;
+}
+
+.title {
+  @apply text-3xl font-bold font-[Exo_2];
+}
+
+.subtitle {
+  @apply text-2xl font-bold font-[Exo_2];
 }

@@ -76,7 +76,7 @@ export default async function RootLayout({
       <body className="bg-gradient-to-b from-[#0d1f29] to-[#051017] text-[#ededed] font-[Inter] grid grid-rows-[auto_1fr_auto] h-screen overflow-x-hidden">
         <NextIntlClientProvider>
           <Header />
-          <main>{children}</main>
+          <main className="container my-5">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>
