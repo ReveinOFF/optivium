@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
@@ -13,24 +13,23 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #666;
-} */
-
-/* input::-webkit-outer-spin-button,
+}
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-} */
+}
 
 * {
-  /* scrollbar-width: thin; */
-  /* scrollbar-color: #444 #1a1a1a; */
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1a1a1a;
   @apply box-border;
 }
 html {
   color-schema: dark;
 }
 body {
-  @apply font-[Inter] w-screen;
+  @apply font-[Inter];
 }
 main {
   width: inherit;
@@ -43,7 +42,7 @@ h1-h4 {
 }
 
 .container {
-  @apply px-3 mx-auto max-w-7xl;
+  @apply px-3 mx-auto max-w-6xl;
 }
 
 .title {
@@ -52,4 +51,14 @@ h1-h4 {
 
 .subtitle {
   @apply text-2xl font-bold font-[Exo_2];
+}
+
+.content,
+.list {
+  @apply text-[1rem] text-white opacity-70;
+}
+
+.white-filter {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(19%) saturate(21%)
+    hue-rotate(289deg) brightness(104%) contrast(105%);
 }

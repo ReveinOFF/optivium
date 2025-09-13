@@ -35,11 +35,11 @@ export const metadata: Metadata = {
 export default function CookiesPolicy() {
   return (
     <>
-      <h1 className="title h1-main text-center uppercase">Cookies Policy</h1>
+      <h1 className="title text-center uppercase">Cookies Policy</h1>
       <p className="mb-4 italic text-sm desc text-right max-sm:text-center">
         Effective Date: July 20, 2025
       </p>
-      <p className="mb-15 text-center max-w-3xl mx-auto max-sm:text-[13px]">
+      <p className="content mb-15 text-center max-w-3xl mx-auto max-sm:text-[13px]">
         This Cookies Policy explains how we use cookies and similar tracking
         technologies on our website. By continuing to browse or use our Service,
         you agree to the use of cookies as described in this policy.

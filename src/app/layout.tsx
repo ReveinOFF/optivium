@@ -3,8 +3,8 @@ import "../styles/globals.css";
 import { getLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { getUserLocale } from "@/services/locale";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = await getUserLocale();
@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
       icon: "/favicon.ico",
       apple: "/apple-touch-icon.png",
     },
-    manifest: "/manifest.webmanifest",
+    manifest: "/site.webmanifest",
     applicationName: "Optivium",
     appleWebApp: {
       capable: true,
@@ -33,9 +33,6 @@ export async function generateMetadata(): Promise<Metadata> {
       language: lang,
       "apple-mobile-web-app-capable": "yes",
       "mobile-web-app-capable": "yes",
-      "theme-color": "#2F2F2F",
-      "msapplication-TileColor": "#2F2F2F",
-      "msapplication-config": "/browserconfig.xml",
     },
   };
 }
@@ -73,10 +70,10 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-gradient-to-b from-[#0d1f29] to-[#051017] text-[#ededed] font-[Inter] grid grid-rows-[auto_1fr_auto] h-screen overflow-x-hidden">
+      <body className="bg-[#000F1B] text-[#ededed] font-[Inter] grid grid-rows-[auto_1fr_auto] min-h-screen">
         <NextIntlClientProvider>
           <Header />
-          <main className="container my-5">{children}</main>
+          <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>
