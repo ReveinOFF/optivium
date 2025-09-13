@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 export default function Contacts() {
   return (
     <>
-      <div className="bg-[#031827] text-center grid gap-2 py-4 rounded-br-3xl rounded-bl-3xl mx-2.5">
+      <section className="bg-[#031827] text-center grid gap-2 py-4 rounded-br-3xl rounded-bl-3xl mx-2.5">
         <h1 className="content">Contacts</h1>
         <p className="title max-w-[700px] mx-auto">
           Зв'яжіться з нами будь яким зручним способом
         </p>
-      </div>
+      </section>
 
       <section className="mt-2.5 bg-[#031827] p-10 rounded-3xl mx-2.5">
         <div className="container grid grid-cols-4 gap-5">
@@ -18,7 +20,9 @@ export default function Contacts() {
               draggable={false}
             />
             <p className="mb-2 content">Instagram:</p>
-            <p>@asfdsgsdgsf</p>
+            <Link href="" className="underline hover:text-green-400">
+              @asfdsgsdgsf
+            </Link>
           </div>
           <div className="relative border-[#ffffffb1] border-b-[1px] rounded-3xl px-5 py-10 bg-[#031a2b]">
             <img
@@ -28,7 +32,9 @@ export default function Contacts() {
               draggable={false}
             />
             <p className="mb-2 content">Facebook:</p>
-            <p>@asfdsgsdgsf</p>
+            <Link href="" className="underline hover:text-green-400">
+              @asfdsgsdgsf
+            </Link>
           </div>
           <div className="relative border-[#ffffffb1] border-b-[1px] rounded-3xl px-5 py-10 bg-[#031a2b]">
             <img
@@ -38,7 +44,9 @@ export default function Contacts() {
               draggable={false}
             />
             <p className="mb-2 content">Phone:</p>
-            <p>+456546546</p>
+            <Link href="" className="underline hover:text-green-400">
+              +456546546
+            </Link>
           </div>
           <div className="relative border-[#ffffffb1] border-b-[1px] rounded-3xl px-5 py-10 bg-[#031a2b]">
             <img
@@ -48,7 +56,9 @@ export default function Contacts() {
               draggable={false}
             />
             <p className="mb-2 content">Email:</p>
-            <p>asfasfa@temp.ts</p>
+            <Link href="" className="underline hover:text-green-400">
+              asfasfa@temp.ts
+            </Link>
           </div>
         </div>
       </section>
@@ -80,7 +90,7 @@ export default function Contacts() {
           <img
             src="/assets/images/test2.jpg"
             alt="place"
-            className="rounded-3xl"
+            className="rounded-3xl w-full"
             draggable={false}
           />
         </div>

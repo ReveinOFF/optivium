@@ -1,176 +1,92 @@
-import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { headers } from "next/headers";
-import Image from "next/image";
+"use client";
 
-// export async function generateMetadata(): Promise<Metadata> {
-//   const t = await getTranslations("Home");
-//   const pathname = (await headers()).get("x-pathname") as string;
+import { motion } from "framer-motion";
 
-//   return {
-//     title: t("meta.title"),
-//     description: t("meta.description"),
-//     keywords: t("meta.keywords"),
-
-//     openGraph: {
-//       title: t("meta.title"),
-//       description: t("meta.description"),
-//       images: "/assets/images/fliper.png",
-//       type: "website",
-//       url: process.env.SITE_URL + pathname,
-//     },
-
-//     twitter: {
-//       title: t("meta.title"),
-//       description: t("meta.description"),
-//       images: "/assets/images/fliper.png",
-//       card: "summary",
-//     },
-
-//     robots: {
-//       index: false,
-//       follow: false,
-//     },
-
-//     alternates: {
-//       canonical: process.env.SITE_URL + pathname,
-//     },
-//   };
-// }
-
-export default async function About() {
-  // const t = await getTranslations("Home");
-
+export default function AboutUsPage() {
   return (
     <>
-      <section className="grid grid-cols-[1fr_0.8fr] gap-10">
-        <div>
-          <h1 className="title">Хто ми</h1>
-          <p className="content mt-4">
-            Afasfsa fsdgsdghs gksdjghskdhgksdhkjghk shkghksd kjsdhkjghsdk
-            ghkjsdh gksdhgkhsdkjgj sdjgkjshdgkj hsdgh ksehgkj hdkjghsjgskdjh
-            ghkjsdh gksdhgkhsdkjgj sdjgkjshdgkj hsdgh ksehgkj hdkjghsjgskdjh
-            ghkjsdh gksdhgkhsdkjgj sdjgkjshdgkj hsdgh ksehgkj hdkjghsjgskdjh
-            ghkjsdh gksdhgkhsdkjgj sdjgkjshdgkj hsdgh ksehgkj hdkjghsjgskdjh
+      <section className="bg-[#031827] rounded-br-3xl rounded-bl-3xl mx-2.5 h-7"></section>
+
+      <section className="px-6 md:px-16 py-24 grid md:grid-cols-2 gap-12 items-center">
+        <div className="text-center md:text-left">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl md:text-6xl font-bold mb-6"
+          >
+            Про нас
+          </motion.h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Мы создаём решения для бизнеса и общества, объединяя инновации,
+            технологии и команду профессионалов.
           </p>
         </div>
-        <img
-          src="/assets/images/aboutus_1.png"
-          alt="who_are_we"
-          className="rounded-2xl w-full h-70 object-cover"
+        <motion.img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          alt="About Hero"
+          className="rounded-2xl shadow-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
         />
       </section>
 
-      <section className="mt-10">
-        <h2 className="title">Наші особливості</h2>
-
-        <div className="grid grid-cols-4 gap-5 mt-5">
-          <div className="grid gap-2 bg-[#031827] rounded-2xl px-10 py-15">
-            <Image
-              src="/assets/icons/icon_tr.png"
-              alt="icon"
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-            <p className="content text-center">Agdsgsdggds ds</p>
-          </div>
-          <div className="grid gap-2 bg-[#031827] rounded-2xl px-10 py-15">
-            <Image
-              src="/assets/icons/icon_tr.png"
-              alt="icon"
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-            <p className="content text-center">Dsg sdgsdgds</p>
-          </div>
-          <div className="grid gap-2 bg-[#031827] rounded-2xl px-10 py-15">
-            <Image
-              src="/assets/icons/icon_tr.png"
-              alt="icon"
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-            <p className="content text-center">Sgds dsfsdf</p>
-          </div>
-          <div className="grid gap-2 bg-[#031827] rounded-2xl px-10 py-15">
-            <Image
-              src="/assets/icons/icon_tr.png"
-              alt="icon"
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-            <p className="content text-center">AFSAdsgsdg</p>
-          </div>
+      <section className="grid md:grid-cols-2 gap-8 px-6 md:px-16 py-12">
+        <div className="bg-[#031827] shadow-lg rounded-2xl p-6">
+          <h2 className="text-2xl font-semibold mb-4 text-green-400">
+            Наша місія
+          </h2>
+          <p className="content">
+            Допомагати бізнесу та суспільству розвиватися за допомогою сучасних
+            технологій і рішень, що роблять світ кращим.
+          </p>
+        </div>
+        <div className="bg-[#031827] shadow-lg rounded-2xl p-6">
+          <h2 className="text-2xl font-semibold mb-4 text-green-400">
+            Наші цінності
+          </h2>
+          <ul className="list-disc list-inside content space-y-2">
+            <li>Інноваційність</li>
+            <li>Відповідальність</li>
+            <li>Командна робота</li>
+            <li>Довіра та прозорість</li>
+          </ul>
         </div>
       </section>
 
-      <section className="mt-10">
-        <h2 className="title">Конкурентні переваги</h2>
-
-        <div className="grid grid-cols-4 gap-5 mt-5">
-          <div className="grid gap-2 bg-[#031827] rounded-2xl px-10 py-15">
-            <Image
-              src="/assets/icons/icon_tr.png"
-              alt="icon"
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-            <p className="content text-center">Agdsgsdggds ds</p>
-          </div>
-          <div className="grid gap-2 bg-[#031827] rounded-2xl px-10 py-15">
-            <Image
-              src="/assets/icons/icon_tr.png"
-              alt="icon"
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-            <p className="content text-center">Dsg sdgsdgds</p>
-          </div>
-          <div className="grid gap-2 bg-[#031827] rounded-2xl px-10 py-15">
-            <Image
-              src="/assets/icons/icon_tr.png"
-              alt="icon"
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-            <p className="content text-center">Sgds dsfsdf</p>
-          </div>
-          <div className="grid gap-2 bg-[#031827] rounded-2xl px-10 py-15">
-            <Image
-              src="/assets/icons/icon_tr.png"
-              alt="icon"
-              width={70}
-              height={70}
-              className="mx-auto"
-            />
-            <p className="content text-center">AFSAdsgsdg</p>
-          </div>
+      <section className="px-6 md:px-16 py-16 text-center">
+        <h2 className="text-3xl font-bold mb-12">Наша команда</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {[1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className="bg-[#031827] shadow-md rounded-2xl p-6 flex flex-col items-center"
+            >
+              <div className="w-24 h-24 rounded-full bg-gray-600 mb-4" />
+              <h3 className="font-semibold text-lg">Member {i}</h3>
+              <p className="text-gray-400 text-sm">Position</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="mt-10">
-        <h2 className="title">Наша філософія</h2>
-
-        <div className="bg-[#031827] rounded-2xl content mt-5 px-5 pt-5 pb-30">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sint
-          iure quaerat, numquam, neque, fuga voluptatem nisi rerum dicta
-          asperiores corrupti commodi doloribus repellat saepe enim. Id pariatur
-          eligendi recusandae? Facilis consectetur veritatis neque vel illum
-          suscipit libero accusamus excepturi cupiditate quisquam eius fuga
-          numquam ipsum cum quia tenetur dolorum sunt minus amet, earum
-          reiciendis nisi hic impedit nulla! Consectetur. Culpa deleniti minus
-          officia iste sapiente inventore repellat, necessitatibus doloribus
-          sequi asperiores fuga possimus, nisi expedita vel, dolore placeat!
-          Quibusdam vitae tenetur similique repellendus accusantium ratione
-          praesentium iste ab molestias.
+      <section className="px-6 md:px-16 py-12 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 className="text-3xl font-bold mb-6">Наш офіс</h2>
+          <p className="content leading-relaxed">
+            Головний офіс розташований у сучасному бізнес-центрі, що символізує
+            відкритість, інновації та комфорт для співробітників та партнерів.
+          </p>
         </div>
+        <motion.img
+          src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
+          alt="Office"
+          className="rounded-2xl shadow-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        />
       </section>
     </>
   );

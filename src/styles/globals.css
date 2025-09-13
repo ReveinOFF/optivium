@@ -20,6 +20,13 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+@layer components {
+  .content,
+  .list {
+    @apply text-[1rem] text-white opacity-70;
+  }
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: #444 #1a1a1a;
@@ -51,11 +58,6 @@ h1-h4 {
 
 .subtitle {
   @apply text-2xl font-bold font-[Exo_2];
-}
-
-.content,
-.list {
-  @apply text-[1rem] text-white opacity-70;
 }
 
 .white-filter {
