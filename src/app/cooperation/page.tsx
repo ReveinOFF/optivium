@@ -42,48 +42,48 @@ export default function Home() {
 
   return (
     <>
-      <section className="bg-[#031827] rounded-br-3xl rounded-bl-3xl mx-2.5 h-7"></section>
-
-      <section className="px-6 md:px-16 py-24 grid md:grid-cols-2 gap-12 items-center">
-        <div className="text-center md:text-left">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
-          >
-            Сотрудничество
-          </motion.h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Мы открыты к партнёрству: совместные проекты, интеграции и
-            стратегические альянсы, которые приносят пользу обеим сторонам.
-          </p>
-          <div className="flex gap-4 justify-center md:justify-start">
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 font-semibold"
+      <section className="py-10 bg-[#031827] rounded-br-3xl rounded-bl-3xl mx-2.5">
+        <div className="container grid md:grid-cols-2 gap-12 items-center">
+          <div className="text-center md:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-5xl md:text-6xl font-bold mb-6"
             >
-              Связаться
-            </a>
-            <a
-              href="#partners"
-              className="px-6 py-3 rounded-xl border border-green-400 hover:bg-green-900 font-semibold"
-            >
-              Наши партнёры
-            </a>
+              Сотрудничество
+            </motion.h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Мы открыты к партнёрству: совместные проекты, интеграции и
+              стратегические альянсы, которые приносят пользу обеим сторонам.
+            </p>
+            <div className="flex gap-4 justify-center md:justify-start">
+              <a
+                href="#contact"
+                className="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 font-semibold"
+              >
+                Связаться
+              </a>
+              <a
+                href="#partners"
+                className="px-6 py-3 rounded-xl border border-green-400 hover:bg-green-900 font-semibold"
+              >
+                Наши партнёры
+              </a>
+            </div>
           </div>
+          <motion.img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+            alt="Cooperation Hero"
+            className="rounded-2xl shadow-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          />
         </div>
-        <motion.img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-          alt="Cooperation Hero"
-          className="rounded-2xl shadow-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        />
       </section>
 
-      <section className="px-6 md:px-16 py-16">
+      <section className="container py-10 mx-2.5">
         <h2 className="text-3xl font-bold mb-8 text-center">
           Почему с нами сотрудничают
         </h2>
@@ -114,45 +114,49 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 md:px-16 py-16 grid md:grid-cols-2 gap-12 items-center bg-[#0b2238] rounded-2xl mx-6 md:mx-16">
-        <img
-          src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4"
-          alt="Format 1"
-          className="rounded-2xl shadow-lg"
-        />
-        <div>
-          <h3 className="text-2xl font-bold mb-4 text-green-400">
-            Формат: Проектное сотрудничество
-          </h3>
-          <p className="text-gray-300 mb-4">
-            Короткие или среднесрочные проекты с чёткими KPI и результатами.
-          </p>
-          <a href="#contact" className="text-green-400 hover:underline">
-            Узнать подробнее →
-          </a>
+      <section className="py-10 bg-[#031827] rounded-2xl mx-2.5 mb-2.5">
+        <div className="container grid md:grid-cols-2 gap-12 items-center">
+          <img
+            src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4"
+            alt="Format 1"
+            className="rounded-2xl shadow-lg"
+          />
+          <div>
+            <h3 className="text-2xl font-bold mb-4 text-green-400">
+              Формат: Проектное сотрудничество
+            </h3>
+            <p className="text-gray-300 mb-4">
+              Короткие или среднесрочные проекты с чёткими KPI и результатами.
+            </p>
+            <a href="#contact" className="text-green-400 hover:underline">
+              Узнать подробнее →
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="px-6 md:px-16 py-16 grid md:grid-cols-2 gap-12 items-center bg-[#0b2238] rounded-2xl mx-6 md:mx-16">
-        <img
-          src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4"
-          alt="Format 1"
-          className="rounded-2xl shadow-lg"
-        />
-        <div>
-          <h3 className="text-2xl font-bold mb-4 text-green-400">
-            Формат: Проектное сотрудничество
-          </h3>
-          <p className="text-gray-300 mb-4">
-            Короткие или среднесрочные проекты с чёткими KPI и результатами.
-          </p>
-          <a href="#contact" className="text-green-400 hover:underline">
-            Узнать подробнее →
-          </a>
+      <section className="py-10 bg-[#031827] rounded-2xl mx-2.5">
+        <div className="container grid md:grid-cols-2 gap-12 items-center">
+          <img
+            src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4"
+            alt="Format 1"
+            className="rounded-2xl shadow-lg"
+          />
+          <div>
+            <h3 className="text-2xl font-bold mb-4 text-green-400">
+              Формат: Проектное сотрудничество
+            </h3>
+            <p className="text-gray-300 mb-4">
+              Короткие или среднесрочные проекты с чёткими KPI и результатами.
+            </p>
+            <a href="#contact" className="text-green-400 hover:underline">
+              Узнать подробнее →
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="px-6 md:px-16 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <section className="container py-10 grid md:grid-cols-2 gap-12 items-center mx-2.5">
         <div>
           <h3 className="text-2xl font-bold mb-4 text-green-400">
             Формат: Долгосрочное партнёрство
@@ -165,38 +169,40 @@ export default function Home() {
           </a>
         </div>
         <img
-          src="https://images.unsplash.com/photo-1515165562835-c7401b5b0b9b"
+          src="https://images.unsplash.com/photo-1556761175-129418cb2dfe"
           alt="Format 2"
           className="rounded-2xl shadow-lg"
         />
       </section>
 
-      <section className="px-6 md:px-16 py-16 grid md:grid-cols-2 gap-12 items-center bg-[#0b2238] rounded-2xl mx-6 md:mx-16">
-        <img
-          src="https://images.unsplash.com/photo-1515822842456-3b9c5f3b9a5b"
-          alt="Integration"
-          className="rounded-2xl shadow-lg"
-        />
-        <div>
-          <h3 className="text-2xl font-bold mb-4 text-green-400">
-            Формат: Технологическая интеграция
-          </h3>
-          <p className="text-gray-300 mb-4">
-            Интеграция сервисов и SDK, совместная разработка модулей и API.
-          </p>
-          <a href="#contact" className="text-green-400 hover:underline">
-            Узнать подробнее →
-          </a>
+      <section className="py-10 bg-[#031827] rounded-2xl mx-2.5">
+        <div className="container grid md:grid-cols-2 gap-12 items-center">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-129418cb2dfe"
+            alt="Integration"
+            className="rounded-2xl shadow-lg"
+          />
+          <div>
+            <h3 className="text-2xl font-bold mb-4 text-green-400">
+              Формат: Технологическая интеграция
+            </h3>
+            <p className="text-gray-300 mb-4">
+              Интеграция сервисов и SDK, совместная разработка модулей и API.
+            </p>
+            <a href="#contact" className="text-green-400 hover:underline">
+              Узнать подробнее →
+            </a>
+          </div>
         </div>
       </section>
 
-      <section id="partners" className="px-6 md:px-16 py-16">
+      <section id="partners" className="container py-10 mx-2.5">
         <h2 className="text-3xl font-bold mb-8 text-center">Наши партнёры</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 items-center">
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <div
               key={i}
-              className="bg-[#0b2238] rounded-xl p-6 flex items-center justify-center h-24"
+              className="bg-[#031827] rounded-xl p-6 flex items-center justify-center h-24"
             >
               <div className="w-32 h-10 bg-gray-600 rounded-sm" />
             </div>
@@ -204,23 +210,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="contact"
-        className="px-6 md:px-16 py-20 text-center bg-[#0b2238] rounded-2xl mx-6 md:mx-16"
-      >
-        <h2 className="text-3xl font-bold mb-6">
-          Готовы обсудить партнёрство?
-        </h2>
-        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-          Оставьте заявку — мы подготовим предложение и свяжемся в удобное для
-          вас время.
-        </p>
-        <a
-          href="#contacts"
-          className="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 font-semibold"
-        >
-          Связаться
-        </a>
+      <section className="py-10 bg-[#031827] rounded-2xl mx-2.5">
+        <div className="container text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Готовы обсудить партнёрство?
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Оставьте заявку — мы подготовим предложение и свяжемся в удобное для
+            вас время.
+          </p>
+          <a
+            href="#contacts"
+            className="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 font-semibold"
+          >
+            Связаться
+          </a>
+        </div>
       </section>
     </>
   );

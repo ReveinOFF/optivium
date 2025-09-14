@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Optivium from "../optivium/optivium";
 import useLang from "@/hooks/useLang";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function HeaderClient({ lang }: { lang: string }) {
   const [showLang, setShowLang] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
   const { changeLang } = useLang();
 
   const langs = [
@@ -38,10 +39,27 @@ export default function HeaderClient({ lang }: { lang: string }) {
   ];
 
   const getLang = useMemo(() => {
-    console.log(lang);
-    console.log(langs.find((item) => item.code === lang)?.translate_code);
     return langs.find((item) => item.code === lang)?.translate_code;
   }, [lang]);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      console.log("asf");
+      const target = event.target as Node;
+
+      if (langRef.current && target && !langRef.current.contains(target)) {
+        setShowLang(false);
+      }
+    }
+
+    if (showLang) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [showLang, setShowLang]);
 
   const onChangeLang = (code: string) => {
     changeLang(code);
@@ -97,7 +115,10 @@ export default function HeaderClient({ lang }: { lang: string }) {
             />
           </button>
           {showLang && (
-            <div className="absolute right-0 mt-2 w-52 bg-[#0d1f29] border border-[#12252b] rounded-lg shadow-xl z-50">
+            <div
+              className="absolute right-0 mt-2 w-52 bg-[#0d1f29] border border-[#12252b] rounded-lg shadow-xl z-50"
+              ref={langRef}
+            >
               <ul className="py-2">
                 {langs.map((item, idx) => (
                   <li
