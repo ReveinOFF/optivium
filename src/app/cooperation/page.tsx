@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // export async function generateMetadata(): Promise<Metadata> {
 //   const t = await getTranslations("Home");
@@ -58,18 +59,18 @@ export default function Home() {
               стратегические альянсы, которые приносят пользу обеим сторонам.
             </p>
             <div className="flex gap-4 justify-center md:justify-start">
-              <a
+              <Link
                 href="#contact"
-                className="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 font-semibold"
+                className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold"
               >
                 Связаться
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#partners"
-                className="px-6 py-3 rounded-xl border border-green-400 hover:bg-green-900 font-semibold"
+                className="px-6 py-3 rounded-xl border border-[#9ADE20] hover:bg-green-900 font-semibold"
               >
                 Наши партнёры
-              </a>
+              </Link>
             </div>
           </div>
           <motion.img
@@ -107,7 +108,7 @@ export default function Home() {
             },
           ].map((it, i) => (
             <div key={i} className="bg-[#0b2238] rounded-2xl p-6 shadow-md">
-              <h3 className="text-green-400 font-semibold mb-2">{it.title}</h3>
+              <h3 className="text-[#9ADE20] font-semibold mb-2">{it.title}</h3>
               <p className="text-gray-300 text-sm">{it.desc}</p>
             </div>
           ))}
@@ -122,15 +123,15 @@ export default function Home() {
             className="rounded-2xl shadow-lg"
           />
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-green-400">
+            <h3 className="text-2xl font-bold mb-4 text-[#9ADE20]">
               Формат: Проектное сотрудничество
             </h3>
             <p className="text-gray-300 mb-4">
               Короткие или среднесрочные проекты с чёткими KPI и результатами.
             </p>
-            <a href="#contact" className="text-green-400 hover:underline">
+            <Link href="#contact" className="text-[#9ADE20] hover:underline">
               Узнать подробнее →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -143,30 +144,30 @@ export default function Home() {
             className="rounded-2xl shadow-lg"
           />
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-green-400">
+            <h3 className="text-2xl font-bold mb-4 text-[#9ADE20]">
               Формат: Проектное сотрудничество
             </h3>
             <p className="text-gray-300 mb-4">
               Короткие или среднесрочные проекты с чёткими KPI и результатами.
             </p>
-            <a href="#contact" className="text-green-400 hover:underline">
+            <Link href="#contact" className="text-[#9ADE20] hover:underline">
               Узнать подробнее →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="container py-10 grid md:grid-cols-2 gap-12 items-center mx-2.5">
         <div>
-          <h3 className="text-2xl font-bold mb-4 text-green-400">
+          <h3 className="text-2xl font-bold mb-4 text-[#9ADE20]">
             Формат: Долгосрочное партнёрство
           </h3>
           <p className="text-gray-300 mb-4">
             Стратегические альянсы, совместные продукты и совместные команды.
           </p>
-          <a href="#contact" className="text-green-400 hover:underline">
+          <Link href="#contact" className="text-[#9ADE20] hover:underline">
             Узнать подробнее →
-          </a>
+          </Link>
         </div>
         <img
           src="https://images.unsplash.com/photo-1556761175-129418cb2dfe"
@@ -183,15 +184,15 @@ export default function Home() {
             className="rounded-2xl shadow-lg"
           />
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-green-400">
+            <h3 className="text-2xl font-bold mb-4 text-[#9ADE20]">
               Формат: Технологическая интеграция
             </h3>
             <p className="text-gray-300 mb-4">
               Интеграция сервисов и SDK, совместная разработка модулей и API.
             </p>
-            <a href="#contact" className="text-green-400 hover:underline">
+            <Link href="#contact" className="text-[#9ADE20] hover:underline">
               Узнать подробнее →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -219,12 +220,12 @@ export default function Home() {
             Оставьте заявку — мы подготовим предложение и свяжемся в удобное для
             вас время.
           </p>
-          <a
+          <Link
             href="#contacts"
-            className="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 font-semibold"
+            className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold"
           >
             Связаться
-          </a>
+          </Link>
         </div>
       </section>
     </>

@@ -20,7 +20,7 @@ export default function Footer() {
           Back to top
         </button>
         <div className="grid gap-1">
-          <div className="flex gap-5 items-center text-[1.1rem] text-white [&>a]:not-hover:opacity-80 [&>a]:hover:text-green-400 [&>a]:hover:opacity-100">
+          <div className="flex gap-5 items-center text-[1.1rem] text-white [&>a]:not-hover:opacity-80 [&>a]:hover:text-[#9ADE20] [&>a]:hover:opacity-100">
             <Link href="/privacy">Privacy</Link>
             <div className="w-1 h-1 rounded-full bg-white"></div>
             <Link href="/terms">Terms</Link>

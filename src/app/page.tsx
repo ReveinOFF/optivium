@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // export async function generateMetadata(): Promise<Metadata> {
 //   const t = await getTranslations("Home");
@@ -57,18 +58,18 @@ export default function Home() {
               Инновации, технологии и партнёрство для будущего.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a
+              <Link
                 href="#services"
-                className="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 font-semibold text-center"
+                className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold text-center"
               >
                 Наши услуги
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#contacts"
-                className="px-6 py-3 rounded-xl border border-green-400 hover:bg-green-900 font-semibold text-center"
+                className="px-6 py-3 rounded-xl border border-[#9ADE20] hover:bg-green-900 font-semibold text-center"
               >
                 Связаться
-              </a>
+              </Link>
             </div>
           </div>
           <motion.img
@@ -92,7 +93,7 @@ export default function Home() {
             { title: "Международность", text: "Работаем по всему миру" },
           ].map((item, i) => (
             <div key={i} className="bg-[#031827] rounded-2xl p-6 shadow-md">
-              <h3 className="font-semibold text-xl mb-2 text-green-400">
+              <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
                 {item.title}
               </h3>
               <p className="text-gray-300 text-sm">{item.text}</p>
@@ -125,14 +126,17 @@ export default function Home() {
 
       <section className="container py-10 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-green-400">Услуги</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">Услуги</h2>
           <p className="text-gray-300 mb-6">
             Мы предлагаем широкий спектр IT-решений, которые помогают бизнесу
             расти и адаптироваться к новым вызовам.
           </p>
-          <a href="#services-page" className="text-green-400 hover:underline">
+          <Link
+            href="#services-page"
+            className="text-[#9ADE20] hover:underline"
+          >
             Подробнее →
-          </a>
+          </Link>
         </div>
         <img
           src="https://images.unsplash.com/photo-1556761175-129418cb2dfe"
@@ -149,33 +153,33 @@ export default function Home() {
             className="rounded-2xl shadow-lg order-2 md:order-1"
           />
           <div className="order-1 md:order-2">
-            <h2 className="text-3xl font-bold mb-6 text-green-400">
+            <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
               Сотрудничество
             </h2>
             <p className="text-gray-300 mb-6">
               Мы открыты для долгосрочных партнёрских отношений и совместных
               проектов с компаниями по всему миру.
             </p>
-            <a
+            <Link
               href="#cooperation-page"
-              className="text-green-400 hover:underline"
+              className="text-[#9ADE20] hover:underline"
             >
               Подробнее →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="py-10 grid md:grid-cols-2 gap-12 items-center container">
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-green-400">Про нас</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">Про нас</h2>
           <p className="text-gray-300 mb-6">
             Наша миссия — внедрять инновации, помогать бизнесу и создавать
             ценность для общества.
           </p>
-          <a href="#about-page" className="text-green-400 hover:underline">
+          <Link href="#about-page" className="text-[#9ADE20] hover:underline">
             Подробнее →
-          </a>
+          </Link>
         </div>
         <img
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
@@ -192,14 +196,17 @@ export default function Home() {
             className="rounded-2xl shadow-lg order-2 md:order-1"
           />
           <div className="order-1 md:order-2">
-            <h2 className="text-3xl font-bold mb-6 text-green-400">Контакты</h2>
+            <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">Контакты</h2>
             <p className="text-gray-300 mb-6">
               Свяжитесь с нами для консультации, сотрудничества или получения
               дополнительной информации.
             </p>
-            <a href="#contacts-page" className="text-green-400 hover:underline">
+            <Link
+              href="#contacts-page"
+              className="text-[#9ADE20] hover:underline"
+            >
               Подробнее →
-            </a>
+            </Link>
           </div>
         </div>
       </section>

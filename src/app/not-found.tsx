@@ -49,8 +49,8 @@ export default async function NotFound() {
       </p>
       <div className="flex mt-10">
         <Link
-          href="/"
-          className="py-2 px-3 font-bold bg-[#001f27] rounded-[5px] hover:bg-[#002731] mx-auto"
+          href="#contacts"
+          className="px-6 py-3 rounded-xl border border-[#9ADE20] hover:bg-green-900 font-semibold text-center mx-auto"
         >
           Go to Homepage
         </Link>

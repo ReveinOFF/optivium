@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ServicesPage() {
   return (
@@ -59,7 +60,7 @@ export default function ServicesPage() {
             },
           ].map((service, i) => (
             <div key={i} className="bg-[#031827] rounded-2xl p-6 shadow-md">
-              <h3 className="font-semibold text-xl mb-2 text-green-400">
+              <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
                 {service.title}
               </h3>
               <p className="text-gray-300 text-sm">{service.text}</p>
@@ -70,7 +71,7 @@ export default function ServicesPage() {
 
       <section className="container py-10 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-green-400">
+          <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
             Веб-разработка
           </h2>
           <p className="text-gray-300 mb-6">
@@ -93,7 +94,7 @@ export default function ServicesPage() {
             className="rounded-2xl shadow-lg order-2 md:order-1"
           />
           <div className="order-1 md:order-2">
-            <h2 className="text-3xl font-bold mb-6 text-green-400">
+            <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
               Мобильные приложения
             </h2>
             <p className="text-gray-300 mb-6">
@@ -106,7 +107,7 @@ export default function ServicesPage() {
 
       <section className="container py-24 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-green-400">
+          <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
             UI/UX дизайн
           </h2>
           <p className="text-gray-300 mb-6">
@@ -128,12 +129,12 @@ export default function ServicesPage() {
             Свяжитесь с нами, и мы подберём для вас лучшее решение, которое
             поможет вашему бизнесу расти и развиваться.
           </p>
-          <a
+          <Link
             href="#contacts"
-            className="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 font-semibold"
+            className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold"
           >
             Связаться
-          </a>
+          </Link>
         </div>
       </section>
     </>

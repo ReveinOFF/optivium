@@ -80,7 +80,7 @@ export default function HeaderClient({ lang }: { lang: string }) {
           <Optivium textSize="text-2xl" />
         </Link>
 
-        <nav className="flex items-center gap-3 [&>a]:hover:text-green-400 [&>a]:hover:opacity-100">
+        <nav className="flex items-center gap-3 [&>a]:hover:text-[#9ADE20] [&>a]:hover:opacity-100">
           <Link href="/services" className="opacity-80">
             Services
           </Link>

@@ -34,7 +34,7 @@ export default function AboutUs() {
 
       <section className="grid md:grid-cols-2 gap-8 py-12 container">
         <div className="bg-[#031827] shadow-lg rounded-2xl p-6">
-          <h2 className="text-2xl font-semibold mb-4 text-green-400">
+          <h2 className="text-2xl font-semibold mb-4 text-[#9ADE20]">
             Наша місія
           </h2>
           <p className="content">
@@ -43,7 +43,7 @@ export default function AboutUs() {
           </p>
         </div>
         <div className="bg-[#031827] shadow-lg rounded-2xl p-6">
-          <h2 className="text-2xl font-semibold mb-4 text-green-400">
+          <h2 className="text-2xl font-semibold mb-4 text-[#9ADE20]">
             Наші цінності
           </h2>
           <ul className="list-disc list-inside content space-y-2">

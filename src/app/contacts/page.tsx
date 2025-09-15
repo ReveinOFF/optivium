@@ -20,7 +20,7 @@ export default function Contacts() {
               draggable={false}
             />
             <p className="mb-2 content">Instagram:</p>
-            <Link href="" className="underline hover:text-green-400">
+            <Link href="" className="underline hover:text-[#9ADE20]">
               @asfdsgsdgsf
             </Link>
           </div>
@@ -32,7 +32,7 @@ export default function Contacts() {
               draggable={false}
             />
             <p className="mb-2 content">Facebook:</p>
-            <Link href="" className="underline hover:text-green-400">
+            <Link href="" className="underline hover:text-[#9ADE20]">
               @asfdsgsdgsf
             </Link>
           </div>
@@ -44,7 +44,7 @@ export default function Contacts() {
               draggable={false}
             />
             <p className="mb-2 content">Phone:</p>
-            <Link href="" className="underline hover:text-green-400">
+            <Link href="" className="underline hover:text-[#9ADE20]">
               +456546546
             </Link>
           </div>
@@ -56,7 +56,7 @@ export default function Contacts() {
               draggable={false}
             />
             <p className="mb-2 content">Email:</p>
-            <Link href="" className="underline hover:text-green-400">
+            <Link href="" className="underline hover:text-[#9ADE20]">
               asfasfa@temp.ts
             </Link>
           </div>
@@ -76,7 +76,7 @@ export default function Contacts() {
         />
         <div className="bg-[#031827] rounded-3xl">
           <div className="p-8 grid gap-5">
-            <h2 className="title">Офис представительства</h2>
+            <h2 className="title text-[#9ADE20]">Офис представительства</h2>
             <div>
               <p className="content mb-2">Режим работы:</p>
               <p>С понедельника по четверг с 9:00 до 18:00</p>

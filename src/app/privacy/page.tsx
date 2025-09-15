@@ -35,18 +35,24 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <>
-      <h1 className="title text-center uppercase">Privacy Policy</h1>
-      <p className="mb-4 italic text-sm desc text-right max-sm:text-center">
-        Effective Date: Sep 20, 2025
-      </p>
-      <p className="mb-15 text-center max-w-3xl mx-auto max-sm:text-[13px]">
-        We value your privacy and are committed to protecting your personal
-        data. This privacy policy explains what data we collect, how we use it,
-        and what rights you have.
-      </p>
+      <section className="bg-[#031827] text-center py-4 rounded-br-3xl rounded-bl-3xl mx-2.5">
+        <div className="container grid gap-2">
+          <h1 className="title">Privacy Policy</h1>
+          <p className="content max-w-[700px] mx-auto">
+            We value your privacy and are committed to protecting your personal
+            data. This privacy policy explains what data we collect, how we use
+            it, and what rights you have.
+          </p>
+          <p className="mb-4 italic text-sm desc text-right max-sm:text-center">
+            Effective Date: Sep 20, 2025
+          </p>
+        </div>
+      </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">0. Introduction</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          0. Introduction
+        </h2>
         <p className="content">
           Welcome to our website. We respect your privacy and are committed to
           protecting any information you may provide while using our Service.
@@ -58,8 +64,10 @@ export default function PrivacyPolicy() {
         </p>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">1. Information We Collect</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          1. Information We Collect
+        </h2>
         <p className="content">
           Our website does not collect any personal data from users. We may
           collect non-personal information that does not identify individual
@@ -79,8 +87,10 @@ export default function PrivacyPolicy() {
         </p>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">2. How We Use Your Information</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          2. How We Use Your Information
+        </h2>
         <p className="content">Your data is used for the following purposes:</p>
         <ul className="list">
           <li>To provide, improve, and maintain our services</li>
@@ -90,8 +100,10 @@ export default function PrivacyPolicy() {
         </ul>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">3. Data Sharing</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          3. Data Sharing
+        </h2>
         <p className="content">
           We do not sell your personal data. However, we may share your data
           with trusted third parties:
@@ -111,8 +123,10 @@ export default function PrivacyPolicy() {
         </ul>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">4. Your Rights</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          4. Your Rights
+        </h2>
         <p className="content">
           Depending on your jurisdiction, you have the right to:
         </p>
@@ -125,16 +139,20 @@ export default function PrivacyPolicy() {
         </ul>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">5. Data Retention</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          5. Data Retention
+        </h2>
         <p className="content">
           We retain your personal data only as long as necessary for the
           purposes described above, or as required by law.
         </p>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">6. Data Security</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          6. Data Security
+        </h2>
         <p className="content">
           We value the security of your personal data. However, please remember
           that no method of transmission over the Internet or method of
@@ -144,8 +162,10 @@ export default function PrivacyPolicy() {
         </p>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">7. Links to Other Websites</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          7. Links to Other Websites
+        </h2>
         <p className="content">
           Our Service may contain links to third-party websites that are not
           operated by us. If you click on a third-party link, you will be
@@ -158,8 +178,10 @@ export default function PrivacyPolicy() {
         </p>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">8. Cookies and Tracking</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          8. Cookies and Tracking
+        </h2>
         <p className="content">
           We use cookies and similar tracking technologies to enhance your
           experience. Cookies are small text files stored on your device. You
@@ -167,8 +189,10 @@ export default function PrivacyPolicy() {
         </p>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">9. GDPR and CCPA Compliance</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          9. GDPR and CCPA Compliance
+        </h2>
         <p className="content">
           If you are a resident of the European Union (EU), European Economic
           Area (EEA), or California (USA), you are ensubtitled to additional
@@ -177,34 +201,46 @@ export default function PrivacyPolicy() {
         </p>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">10. Changes to This Policy</h2>
-        <p className="content">
-          We may update this Privacy Policy from time to time. Changes will be
-          posted on this page with an updated effective date. We recommend
-          reviewing this policy periodically. Additionally, we may notify users
-          about significant updates via announcements in the{" "}
-          <Link href="/posts" className="link">
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          10. Changes to This Policy
+        </h2>
+        <p>
+          <span className="content">
+            We may update this Privacy Policy from time to time. Changes will be
+            posted on this page with an updated effective date. We recommend
+            reviewing this policy periodically. Additionally, we may notify
+            users about significant updates via announcements in the
+          </span>{" "}
+          <Link href="/posts" className="underline hover:text-[#9ADE20]">
             Posts
           </Link>{" "}
-          section of our website.
+          <span className="content">section of our website.</span>
         </p>
       </section>
 
-      <section className="mb-4">
-        <h2 className="subtitle h2">11. Contact Us</h2>
+      <section className="py-10 max-w-4xl container">
+        <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+          11. Contact Us
+        </h2>
         <p className="content">
           If you have any questions or concerns regarding this privacy policy,
           feel free to contact us at:
         </p>
         <ul className="list">
           <li>
-            <Link href="mailto:support@example.com" className="link">
+            <Link
+              href="mailto:support@example.com"
+              className="underline hover:text-[#9ADE20]"
+            >
               support@example.com
             </Link>
           </li>
           <li>
-            <Link href="https://t.me/SpreadHuntBot" className="link">
+            <Link
+              href="https://t.me/SpreadHuntBot"
+              className="underline hover:text-[#9ADE20]"
+            >
               @SpreadHuntBot
             </Link>
           </li>

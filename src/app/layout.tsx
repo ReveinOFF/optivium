@@ -16,7 +16,6 @@ export async function generateMetadata(): Promise<Metadata> {
       icon: "/favicon.ico",
       apple: "/apple-touch-icon.png",
     },
-    manifest: "/site.webmanifest",
     applicationName: "Optivium",
     appleWebApp: {
       capable: true,
@@ -54,14 +53,8 @@ export default async function RootLayout({
         <link
           rel="icon"
           type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
+          sizes="96x96"
+          href="/favicon-96x96.png"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />

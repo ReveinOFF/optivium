@@ -21,8 +21,7 @@ input::-webkit-inner-spin-button {
 }
 
 @layer components {
-  .content,
-  .list {
+  .content {
     @apply text-[1rem] text-white opacity-70;
   }
 }
@@ -63,4 +62,8 @@ h1-h4 {
 .white-filter {
   filter: brightness(0) saturate(100%) invert(100%) sepia(19%) saturate(21%)
     hue-rotate(289deg) brightness(104%) contrast(105%);
+}
+
+.list {
+  @apply space-y-1 list-disc mb-4 mt-2 text-[1rem] text-white;
 }
