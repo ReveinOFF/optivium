@@ -1,8 +1,19 @@
 {
-  "Home": {
-    "meta": {}
-  },
   "NotFound": {
-    "meta": {}
+    "meta": {},
+    "content": "Oops. Page not found!",
+    "button": "Go to Homepage"
+  },
+  "Footer": {
+    "btn": "Back to top",
+    "content": "All rights reserved.",
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "Header": {
+    "services": "Services",
+    "cooperation": "Cooperation",
+    "about": "About Us",
+    "contacts": "Contacts"
   }
 }

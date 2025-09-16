@@ -1,6 +1,4 @@
-import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { headers } from "next/headers";
 import Link from "next/link";
 
 // export async function generateMetadata(): Promise<Metadata> {
@@ -39,20 +37,20 @@ import Link from "next/link";
 // }
 
 export default async function NotFound() {
-  // const t = await getTranslations("NotFound");
+  const t = await getTranslations("NotFound");
 
   return (
     <>
       <h1 className="text-9xl font-[Exo_2] text-center mt-5">404</h1>
       <p className="text-2xl text-center text-white opacity-70">
-        Oops. Page is not found!
+        {t("content")}
       </p>
       <div className="flex mt-10">
         <Link
           href="#contacts"
           className="px-6 py-3 rounded-xl border border-[#9ADE20] hover:bg-green-900 font-semibold text-center mx-auto"
         >
-          Go to Homepage
+          {t("button")}
         </Link>
       </div>
     </>

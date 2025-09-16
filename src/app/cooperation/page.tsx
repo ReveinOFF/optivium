@@ -38,7 +38,7 @@ import Link from "next/link";
 //   };
 // }
 
-export default function Home() {
+export default function Cooperation() {
   // const t = await getTranslations("Home");
 
   return (

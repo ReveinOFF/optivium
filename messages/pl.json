@@ -1,8 +1,19 @@
 {
-  "Home": {
-    "meta": {}
-  },
   "NotFound": {
-    "meta": {}
+    "meta": {},
+    "content": "Ups. Nie znaleziono strony!",
+    "button": "Przejdź do strony głównej"
+  },
+  "Footer": {
+    "btn": "Powrót do góry",
+    "content": "Wszelkie prawa zastrzeżone.",
+    "terms": "Warunki",
+    "privacy": "Prywatność"
+  },
+  "Header": {
+    "services": "Usługi",
+    "cooperation": "Współpraca",
+    "about": "O nas",
+    "contacts": "Kontakty"
   }
 }

@@ -5,8 +5,11 @@ import Link from "next/link";
 import Optivium from "../optivium/optivium";
 import useLang from "@/hooks/useLang";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function HeaderClient({ lang }: { lang: string }) {
+  const t = useTranslations("Header");
+
   const [showLang, setShowLang] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
   const { changeLang } = useLang();
@@ -82,19 +85,19 @@ export default function HeaderClient({ lang }: { lang: string }) {
 
         <nav className="flex items-center gap-3 [&>a]:hover:text-[#9ADE20] [&>a]:hover:opacity-100">
           <Link href="/services" className="opacity-80">
-            Services
+            {t("services")}
           </Link>
           <div className="w-1 h-1 rounded-full bg-white"></div>
           <Link href="/cooperation" className="opacity-80">
-            Cooperation
+            {t("cooperation")}
           </Link>
           <div className="w-1 h-1 rounded-full bg-white"></div>
           <Link href="/about" className="opacity-80">
-            About Us
+            {t("about")}
           </Link>
           <div className="w-1 h-1 rounded-full bg-white"></div>
           <Link href="/contacts" className="opacity-80">
-            Contacts
+            {t("contacts")}
           </Link>
         </nav>
 
