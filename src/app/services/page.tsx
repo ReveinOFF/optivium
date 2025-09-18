@@ -227,36 +227,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Використання послуги | Слогани */}
-      <section className="border-1 border-[#031827] rounded-3xl py-24 mx-2.5">
-        <div className="container text-center grid grid-cols-2 gap-3">
-          <div className="bg-[#031827] rounded-3xl p-10 grid justify-center">
-            <h2 className="text-2xl font-bold mb-6 text-[#9ADE20] text-center">
-              Як використати послугу
-            </h2>
-            <ul className="list text-left">
-              <li>Підготуйте case study чи галузевий звіт</li>
-              <li>Безкоштовний аудит потенціалу ринку</li>
-              <li>Адаптація під галузі: агро, харчова, хімія, e-commerce</li>
-              <li>Співпраця з палатами та агенціями</li>
-              <li>Аналітика у LinkedIn для довіри</li>
-            </ul>
-          </div>
-          <div className="bg-[#031827] rounded-3xl p-10 grid justify-center">
-            <h2 className="text-2xl font-bold mb-6 text-[#9ADE20] text-center">
-              Слогани
-            </h2>
-            <ul className="list text-left">
-              <li>Виходь на український ринок зі знанням, а не з ризиком.</li>
-              <li>Дані українського ринку. Аналітика, що реально продає.</li>
-              <li>Твій GPS української економіки.</li>
-              <li>Інвестиційні рішення на основі точних даних.</li>
-              <li>Перевіримо ідею до першого мільйона.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Конец */}
       <section className="py-10 bg-[#031827] rounded-3xl mx-2.5 mt-2.5 text-center">
         <div className="container">

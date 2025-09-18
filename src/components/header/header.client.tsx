@@ -6,6 +6,7 @@ import Optivium from "../optivium/optivium";
 import useLang from "@/hooks/useLang";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { LOCALES } from "@/utils/constants";
 
 export default function HeaderClient({ lang }: { lang: string }) {
   const t = useTranslations("Header");
@@ -14,40 +15,12 @@ export default function HeaderClient({ lang }: { lang: string }) {
   const langRef = useRef<HTMLDivElement>(null);
   const { changeLang } = useLang();
 
-  const langs = [
-    {
-      name: "English",
-      code: "en",
-      translate_code: "en",
-      image: "Flag_of_the_United_Kingdom.png",
-    },
-    {
-      name: "Українська",
-      code: "uk",
-      translate_code: "ua",
-      image: "Flag_of_Ukraine.svg",
-    },
-    {
-      name: "Polski",
-      code: "pl",
-      translate_code: "pl",
-      image: "Flag_of_Poland.svg.webp",
-    },
-    {
-      name: "Русский",
-      code: "ru",
-      translate_code: "ru",
-      image: "Flag_of_Russia.svg.png",
-    },
-  ];
-
   const getLang = useMemo(() => {
-    return langs.find((item) => item.code === lang)?.translate_code;
+    return LOCALES.find((item) => item.code === lang)?.translate_code;
   }, [lang]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      console.log("asf");
       const target = event.target as Node;
 
       if (langRef.current && target && !langRef.current.contains(target)) {
@@ -123,7 +96,7 @@ export default function HeaderClient({ lang }: { lang: string }) {
               ref={langRef}
             >
               <ul className="py-2">
-                {langs.map((item, idx) => (
+                {LOCALES.map((item, idx) => (
                   <li
                     key={idx}
                     onClick={() => onChangeLang(item.code)}
