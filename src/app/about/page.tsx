@@ -25,18 +25,19 @@ export default function AboutUs() {
             </p>
           </div>
           <motion.img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+            src="/assets/images/aboutus_1.png"
             alt="About Hero"
             className="rounded-2xl shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
+            draggable={false}
           />
         </div>
       </section>
 
       {/* Місія і цінності */}
-      <section className="grid md:grid-cols-2 gap-8 py-12 container">
+      <section className="grid md:grid-cols-2 gap-2.5 py-12 container">
         <div className="bg-[#031827] shadow-lg rounded-2xl p-6">
           <h2 className="text-2xl font-semibold mb-4 text-[#9ADE20]">
             Наша місія
@@ -67,7 +68,7 @@ export default function AboutUs() {
           <h2 className="text-3xl font-bold mb-8 text-[#9ADE20]">
             Що ми надаємо:
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-gray-300">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               <strong>Консультації з міжнародного рекрутингу</strong> –
               стратегічні поради щодо виходу на іноземні ринки праці.
@@ -89,7 +90,7 @@ export default function AboutUs() {
       </section>
 
       {/* Наші напрямки і особливості */}
-      <section className="grid md:grid-cols-3 gap-8 py-12 container">
+      <section className="grid md:grid-cols-3 gap-2.5 py-12 container">
         <div className="bg-[#031827] shadow-lg rounded-2xl p-6">
           <h2 className="text-2xl font-semibold mb-4 text-[#9ADE20]">
             Наші напрямки
@@ -138,7 +139,7 @@ export default function AboutUs() {
           <h2 className="text-3xl font-bold mb-8 text-[#9ADE20]">
             Конкурентні переваги Optivium:
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-gray-300">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               <strong>Міжнародна мережа партнерів</strong> – ми співпрацюємо з
               компаніями та агентствами по всій Європі та Азії.
@@ -159,22 +160,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* <section className="container py-16 text-center">
-        <h2 className="text-3xl font-bold mb-12">Наша команда</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="bg-[#031827] shadow-md rounded-2xl p-6 flex flex-col items-center"
-            >
-              <div className="w-24 h-24 rounded-full bg-gray-600 mb-4" />
-              <h3 className="font-semibold text-lg">Member {i}</h3>
-              <p className="text-gray-400 text-sm">Position</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
       <section className="container py-12 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="text-3xl font-bold mb-6">Наш офіс</h2>
@@ -190,6 +175,7 @@ export default function AboutUs() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
+          draggable={false}
         />
       </section>
     </>

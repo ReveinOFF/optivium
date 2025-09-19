@@ -59,13 +59,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
-                href="#services"
+                href="/services"
                 className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold text-center"
               >
                 Наши услуги
               </Link>
               <Link
-                href="#contacts"
+                href="/contacts"
                 className="px-6 py-3 rounded-xl border border-[#9ADE20] hover:bg-green-900 font-semibold text-center"
               >
                 Связаться
@@ -73,12 +73,13 @@ export default function Home() {
             </div>
           </div>
           <motion.img
-            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+            src="/assets/images/main.png"
             alt="Hero Illustration"
             className="rounded-2xl shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
+            draggable={false}
           />
         </div>
       </section>
@@ -128,29 +129,28 @@ export default function Home() {
         <div>
           <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">Услуги</h2>
           <p className="text-gray-300 mb-6">
-            Мы предлагаем широкий спектр IT-решений, которые помогают бизнесу
-            расти и адаптироваться к новым вызовам.
+            Мы предлагаем широкий спектр решений, которые помогают бизнесу расти
+            и адаптироваться к новым вызовам.
           </p>
-          <Link
-            href="#services-page"
-            className="text-[#9ADE20] hover:underline"
-          >
+          <Link href="/services" className="text-[#9ADE20] hover:underline">
             Подробнее →
           </Link>
         </div>
         <img
-          src="https://images.unsplash.com/photo-1556761175-129418cb2dfe"
+          src="/assets/images/services_1.png"
           alt="Services"
           className="rounded-2xl shadow-lg"
+          draggable={false}
         />
       </section>
 
       <section className="py-10 bg-[#031827] rounded-3xl mx-2.5">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="https://images.unsplash.com/photo-1521791136064-7986c2920216"
+            src="/assets/images/cooperation_1.png"
             alt="Cooperation"
             className="rounded-2xl shadow-lg order-2 md:order-1"
+            draggable={false}
           />
           <div className="order-1 md:order-2">
             <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
@@ -161,7 +161,7 @@ export default function Home() {
               проектов с компаниями по всему миру.
             </p>
             <Link
-              href="#cooperation-page"
+              href="/cooperation"
               className="text-[#9ADE20] hover:underline"
             >
               Подробнее →
@@ -177,23 +177,25 @@ export default function Home() {
             Наша миссия — внедрять инновации, помогать бизнесу и создавать
             ценность для общества.
           </p>
-          <Link href="#about-page" className="text-[#9ADE20] hover:underline">
+          <Link href="/about" className="text-[#9ADE20] hover:underline">
             Подробнее →
           </Link>
         </div>
         <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          src="/assets/images/aboutus_1.png"
           alt="About Us"
           className="rounded-2xl shadow-lg"
+          draggable={false}
         />
       </section>
 
       <section className="py-10 bg-[#031827] rounded-3xl mx-2.5">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980"
+            src="/assets/images/contacts.png"
             alt="Contacts"
             className="rounded-2xl shadow-lg order-2 md:order-1"
+            draggable={false}
           />
           <div className="order-1 md:order-2">
             <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">Контакты</h2>
@@ -201,10 +203,7 @@ export default function Home() {
               Свяжитесь с нами для консультации, сотрудничества или получения
               дополнительной информации.
             </p>
-            <Link
-              href="#contacts-page"
-              className="text-[#9ADE20] hover:underline"
-            >
+            <Link href="/contacts" className="text-[#9ADE20] hover:underline">
               Подробнее →
             </Link>
           </div>

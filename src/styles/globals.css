@@ -33,13 +33,13 @@ input::-webkit-inner-spin-button {
 * {
   scrollbar-width: thin;
   scrollbar-color: #444 #1a1a1a;
-  @apply box-border;
+  @apply box-border scroll-smooth;
 }
 html {
   color-schema: dark;
 }
 body {
-  @apply font-[Inter] scroll-smooth;
+  @apply font-[Inter];
 }
 main {
   width: inherit;
@@ -49,6 +49,9 @@ button {
 }
 h1-h4 {
   @apply font-[Exo+2];
+}
+img {
+  @apply select-none;
 }
 
 .container {

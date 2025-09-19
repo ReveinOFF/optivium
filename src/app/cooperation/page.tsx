@@ -58,28 +58,23 @@ export default function Cooperation() {
               Мы открыты к партнёрству: совместные проекты, интеграции и
               стратегические альянсы, которые приносят пользу обеим сторонам.
             </p>
-            <div className="flex gap-4 justify-center md:justify-start">
+            <div>
               <Link
-                href="#contact"
+                href="/contacts"
                 className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold"
               >
                 Связаться
               </Link>
-              <Link
-                href="#partners"
-                className="px-6 py-3 rounded-xl border border-[#9ADE20] hover:bg-green-900 font-semibold"
-              >
-                Наши партнёры
-              </Link>
             </div>
           </div>
           <motion.img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+            src="/assets/images/cooperation_1.png"
             alt="Cooperation Hero"
             className="rounded-2xl shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
+            draggable={false}
           />
         </div>
       </section>
@@ -118,30 +113,10 @@ export default function Cooperation() {
       <section className="py-10 bg-[#031827] rounded-2xl mx-2.5 mb-2.5">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4"
+            src="/assets/images/cooperation_2.png"
             alt="Format 1"
             className="rounded-2xl shadow-lg"
-          />
-          <div>
-            <h3 className="text-2xl font-bold mb-4 text-[#9ADE20]">
-              Формат: Проектное сотрудничество
-            </h3>
-            <p className="text-gray-300 mb-4">
-              Короткие или среднесрочные проекты с чёткими KPI и результатами.
-            </p>
-            <Link href="#contact" className="text-[#9ADE20] hover:underline">
-              Узнать подробнее →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 bg-[#031827] rounded-2xl mx-2.5">
-        <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <img
-            src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4"
-            alt="Format 1"
-            className="rounded-2xl shadow-lg"
+            draggable={false}
           />
           <div>
             <h3 className="text-2xl font-bold mb-4 text-[#9ADE20]">
@@ -170,18 +145,20 @@ export default function Cooperation() {
           </Link>
         </div>
         <img
-          src="https://images.unsplash.com/photo-1556761175-129418cb2dfe"
+          src="/assets/images/cooperation_3.png"
           alt="Format 2"
           className="rounded-2xl shadow-lg"
+          draggable={false}
         />
       </section>
 
       <section className="py-10 bg-[#031827] rounded-2xl mx-2.5">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="https://images.unsplash.com/photo-1556761175-129418cb2dfe"
+            src="/assets/images/cooperation_4.png"
             alt="Integration"
             className="rounded-2xl shadow-lg"
+            draggable={false}
           />
           <div>
             <h3 className="text-2xl font-bold mb-4 text-[#9ADE20]">
@@ -197,21 +174,7 @@ export default function Cooperation() {
         </div>
       </section>
 
-      <section id="partners" className="container py-10 mx-2.5">
-        <h2 className="text-3xl font-bold mb-8 text-center">Наши партнёры</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 items-center">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-            <div
-              key={i}
-              className="bg-[#031827] rounded-xl p-6 flex items-center justify-center h-24"
-            >
-              <div className="w-32 h-10 bg-gray-600 rounded-sm" />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-10 bg-[#031827] rounded-2xl mx-2.5">
+      <section className="py-10 bg-[#031827] rounded-2xl mx-2.5 mt-2.5">
         <div className="container text-center">
           <h2 className="text-3xl font-bold mb-6">
             Готовы обсудить партнёрство?
@@ -221,7 +184,7 @@ export default function Cooperation() {
             вас время.
           </p>
           <Link
-            href="#contacts"
+            href="/contacts"
             className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold"
           >
             Связаться
