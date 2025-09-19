@@ -1,6 +1,9 @@
+"use client";
+
 import { LOCALES } from "@/utils/constants";
 import Link from "next/link";
 import { useMemo } from "react";
+import { motion } from "framer-motion";
 
 export default function ContactsClient({ lang }: { lang: string }) {
   const getLang = useMemo(() => {
@@ -82,7 +85,7 @@ export default function ContactsClient({ lang }: { lang: string }) {
       {/* Адреса и карты */}
       <section className="mt-2.5 grid md:grid-cols-2 gap-5 mx-2.5">
         {/* Украина */}
-        <div className="bg-[#031827] rounded-3xl overflow-hidden shadow-lg border border-[#ffffff22]">
+        <div className="bg-[#031827] rounded-3xl overflow-hidden shadow-lg border border-[#ffffff22] grid grid-rows-[auto_1fr_auto]">
           <iframe
             className="rounded-t-3xl"
             title="Ukraine office"
@@ -105,10 +108,19 @@ export default function ContactsClient({ lang }: { lang: string }) {
               <p>вул. Степана Бандери, 19, Рівне, Рівненська область, 33000</p>
             </div>
           </div>
+          <motion.img
+            src="/assets/images/contacts_1.jpg"
+            alt="Office"
+            className="rounded-b-2xl shadow-lg h-[350px] w-full object-cover"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            draggable={false}
+          />
         </div>
 
         {/* Польша */}
-        <div className="bg-[#031827] rounded-3xl overflow-hidden shadow-lg border border-[#ffffff22]">
+        <div className="bg-[#031827] rounded-3xl overflow-hidden shadow-lg border border-[#ffffff22] grid grid-rows-[auto_1fr_auto]">
           <iframe
             className="rounded-t-3xl"
             title="Poland office"
@@ -130,6 +142,15 @@ export default function ContactsClient({ lang }: { lang: string }) {
               <p>ul. Powstańców Śląskich 7a, 53-332 Wrocław</p>
             </div>
           </div>
+          <motion.img
+            src="/assets/images/contacts_2.png"
+            alt="Office"
+            className="rounded-b-2xl shadow-lg h-[350px] w-full object-cover"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            draggable={false}
+          />
         </div>
       </section>
     </>

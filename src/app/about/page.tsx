@@ -169,7 +169,7 @@ export default function AboutUs() {
           </p>
         </div>
         <motion.img
-          src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
+          src="/assets/images/aboutus_2.png"
           alt="Office"
           className="rounded-2xl shadow-lg"
           initial={{ opacity: 0 }}
