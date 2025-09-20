@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="w-1 h-1 rounded-full bg-white max-md:hidden"></div>
             <Link href="/cookies">Cookies</Link>
           </div>
-          <div className="text-center">
+          <div className="text-center max-md:mt-3">
             &#169; {year} Optivium. {t("content")}
           </div>
         </div>

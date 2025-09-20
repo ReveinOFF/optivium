@@ -70,3 +70,15 @@ img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(19%) saturate(21%)
     hue-rotate(289deg) brightness(104%) contrast(105%);
 }
+
+.hr-h {
+  @apply w-full my-2 h-[1px] bg-[#ffffff22];
+}
+
+.popup {
+  @apply fixed top-0 left-0 w-full h-full;
+}
+
+.popup-bg {
+  @apply bg-[#1e2124b7];
+}

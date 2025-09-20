@@ -1,6 +1,9 @@
 {
   "NotFound": {
-    "meta": {},
+    "meta": {
+      "title": "Page not found | Optivium",
+      "description": "Unfortunately, the page you are looking for does not exist."
+    },
     "content": "Oops. Page not found!",
     "button": "Go to Homepage"
   },
@@ -11,9 +14,16 @@
     "privacy": "Privacy"
   },
   "Header": {
+    "menu": "Menu",
     "services": "Services",
     "cooperation": "Cooperation",
     "about": "About Us",
     "contacts": "Contacts"
+  },
+  "Main": {
+    "meta": {
+      "title": "Optivium — innovation and technology for business",
+      "description": "Welcome to Optivium: innovative solutions, reliability, flexibility, and international cooperation for the successful development of your business."
+    }
   }
 }

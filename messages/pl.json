@@ -1,6 +1,9 @@
 {
   "NotFound": {
-    "meta": {},
+    "meta": {
+      "title": "Strona nie została znaleziona | Optivium",
+      "description": "Niestety, strona, której szukasz, nie istnieje."
+    },
     "content": "Ups. Nie znaleziono strony!",
     "button": "Przejdź do strony głównej"
   },
@@ -11,9 +14,16 @@
     "privacy": "Prywatność"
   },
   "Header": {
+    "menu": "Menu",
     "services": "Usługi",
     "cooperation": "Współpraca",
     "about": "O nas",
     "contacts": "Kontakty"
+  },
+  "Main": {
+    "meta": {
+      "title": "Optivium — innowacje i technologie dla biznesu",
+      "description": "Witamy w Optivium: innowacyjne rozwiązania, niezawodność, elastyczność i międzynarodowa współpraca dla pomyślnego rozwoju Twojej firmy."
+    }
   }
 }

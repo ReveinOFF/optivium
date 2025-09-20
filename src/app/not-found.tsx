@@ -1,40 +1,39 @@
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { headers } from "next/headers";
 import Link from "next/link";
 
-// export async function generateMetadata(): Promise<Metadata> {
-//   const t = await getTranslations("NotFound");
-//   const pathname = (await headers()).get("x-pathname") as string;
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("NotFound");
+  const pathname = (await headers()).get("x-pathname") as string;
 
-//   return {
-//     title: t("meta.title"),
-//     description: t("meta.description"),
-//     keywords: t("meta.keywords"),
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
 
-//     openGraph: {
-//       title: t("meta.title"),
-//       description: t("meta.description"),
-//       images: "/assets/images/fliper.png",
-//       type: "website",
-//       url: process.env.SITE_URL + pathname,
-//     },
+    openGraph: {
+      title: t("meta.title"),
+      description: t("meta.description"),
+      type: "website",
+      url: process.env.SITE_URL + pathname,
+    },
 
-//     twitter: {
-//       title: t("meta.title"),
-//       description: t("meta.description"),
-//       images: "/assets/images/fliper.png",
-//       card: "summary",
-//     },
+    twitter: {
+      title: t("meta.title"),
+      description: t("meta.description"),
+      card: "summary",
+    },
 
-//     robots: {
-//       index: false,
-//       follow: false,
-//     },
+    robots: {
+      index: false,
+      follow: false,
+    },
 
-//     alternates: {
-//       canonical: process.env.SITE_URL + pathname,
-//     },
-//   };
-// }
+    alternates: {
+      canonical: process.env.SITE_URL + pathname,
+    },
+  };
+}
 
 export default async function NotFound() {
   const t = await getTranslations("NotFound");

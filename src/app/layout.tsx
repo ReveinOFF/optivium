@@ -10,6 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const lang = await getUserLocale();
 
   return {
+    keywords: "",
     metadataBase: new URL(process.env.SITE_URL as string),
     creator: "ReveinOff",
     icons: {
@@ -24,8 +25,11 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       siteName: "Optivium",
       locale: lang,
+      images: "/assets/images/main.png",
+      type: "website",
     },
     twitter: {
+      images: "/assets/images/main.png",
       site: process.env.TWITTER,
     },
     other: {

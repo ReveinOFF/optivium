@@ -159,25 +159,6 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
-      <section className="container py-12 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Наш офіс</h2>
-          <p className="content leading-relaxed">
-            Головний офіс розташований у сучасному бізнес-центрі, що символізує
-            відкритість, інновації та комфорт для співробітників та партнерів.
-          </p>
-        </div>
-        <motion.img
-          src="/assets/images/aboutus_2.png"
-          alt="Office"
-          className="rounded-2xl shadow-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          draggable={false}
-        />
-      </section>
     </>
   );
 }

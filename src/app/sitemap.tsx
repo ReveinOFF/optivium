@@ -7,7 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 1,
     },
-    { url: `${process.env.SITE_URL}/not-found`, lastModified: new Date() },
     { url: `${process.env.SITE_URL}/about`, lastModified: new Date() },
     { url: `${process.env.SITE_URL}/contacts`, lastModified: new Date() },
     { url: `${process.env.SITE_URL}/cookies`, lastModified: new Date() },
