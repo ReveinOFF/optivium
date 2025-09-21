@@ -23,13 +23,12 @@ export default function Footer() {
           {t("btn")}
         </button>
         <div className="grid gap-1">
-          <div className="max-md:grid max-md:text-center flex gap-5 items-center text-[1.1rem] text-white [&>a]:not-hover:opacity-80 [&>a]:hover:text-[#9ADE20] [&>a]:hover:opacity-100">
-            <Link href="/privacy">{t("privacy")}</Link>
-            <div className="w-1 h-1 rounded-full bg-white max-md:hidden"></div>
-            <Link href="/terms">{t("terms")}</Link>
-            <div className="w-1 h-1 rounded-full bg-white max-md:hidden"></div>
-            <Link href="/cookies">Cookies</Link>
-          </div>
+          <Link
+            href="/terms"
+            className="text-[1.1rem] text-white not-hover:opacity-80 hover:text-[#9ADE20] hover:opacity-100"
+          >
+            {t("terms")}
+          </Link>
           <div className="text-center max-md:mt-3">
             &#169; {year} Optivium. {t("content")}
           </div>
