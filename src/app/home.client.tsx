@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function HomeClient() {
+  const t = useTranslations("Main");
+
   return (
     <>
       <section className="py-10 bg-[#031827] rounded-br-3xl rounded-bl-3xl mx-2.5">
@@ -15,23 +18,21 @@ export default function HomeClient() {
               transition={{ duration: 0.6 }}
               className="text-5xl md:text-6xl font-bold mb-6"
             >
-              Добро пожаловать в Optivium
+              {t("hero_title")}
             </motion.h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Инновации, технологии и партнёрство для будущего.
-            </p>
+            <p className="text-lg text-gray-300 mb-8">{t("hero_subtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 href="/services"
                 className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold text-center"
               >
-                Наши услуги
+                {t("hero_button_services")}
               </Link>
               <Link
                 href="/contacts"
                 className="px-6 py-3 rounded-xl border border-[#9ADE20] hover:bg-green-900 font-semibold text-center"
               >
-                Связаться
+                {t("hero_button_contact")}
               </Link>
             </div>
           </div>
@@ -48,35 +49,41 @@ export default function HomeClient() {
       </section>
 
       <section className="container py-10 text-center">
-        <h2 className="text-3xl font-bold mb-12">Наши особенности</h2>
+        <h2 className="text-3xl font-bold mb-12">
+          {t("features_section_title")}
+        </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-[#031827] rounded-2xl p-6 shadow-md">
             <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
-              Инновации
+              {t("feature_innovation_title")}
             </h3>
             <p className="text-gray-300 text-sm">
-              Мы внедряем современные технологии
+              {t("feature_innovation_text")}
             </p>
           </div>
           <div className="bg-[#031827] rounded-2xl p-6 shadow-md">
             <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
-              Надёжность
+              {t("feature_reliability_title")}
             </h3>
             <p className="text-gray-300 text-sm">
-              Стабильные решения для бизнеса
+              {t("feature_reliability_text")}
             </p>
           </div>
           <div className="bg-[#031827] rounded-2xl p-6 shadow-md">
             <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
-              Гибкость
+              {t("feature_flexibility_title")}
             </h3>
-            <p className="text-gray-300 text-sm">Подстраиваемся под клиента</p>
+            <p className="text-gray-300 text-sm">
+              {t("feature_flexibility_text")}
+            </p>
           </div>
           <div className="bg-[#031827] rounded-2xl p-6 shadow-md">
             <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
-              Международность
+              {t("feature_international_title")}
             </h3>
-            <p className="text-gray-300 text-sm">Работаем по всему миру</p>
+            <p className="text-gray-300 text-sm">
+              {t("feature_international_text")}
+            </p>
           </div>
         </div>
       </section>
@@ -84,26 +91,26 @@ export default function HomeClient() {
       <section className="py-10 bg-[#031827] rounded-3xl mx-2.5">
         <div className="container">
           <h2 className="text-3xl font-bold mb-12 text-center">
-            Наши преимущества
+            {t("advantages_section_title")}
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">Опытная команда специалистов</p>
+              <p className="text-gray-300">{t("advantage_team")}</p>
             </div>
             <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">Поддержка 24/7</p>
+              <p className="text-gray-300">{t("advantage_support")}</p>
             </div>
             <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">Индивидуальный подход</p>
+              <p className="text-gray-300">{t("advantage_custom")}</p>
             </div>
             <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">Современные технологии</p>
+              <p className="text-gray-300">{t("advantage_technology")}</p>
             </div>
             <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">Долгосрочное сотрудничество</p>
+              <p className="text-gray-300">{t("advantage_longterm")}</p>
             </div>
             <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">Высокая надёжность</p>
+              <p className="text-gray-300">{t("advantage_reliability")}</p>
             </div>
           </div>
         </div>
@@ -111,13 +118,12 @@ export default function HomeClient() {
 
       <section className="container py-10 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">Услуги</h2>
-          <p className="text-gray-300 mb-6">
-            Мы предлагаем широкий спектр решений, которые помогают бизнесу расти
-            и адаптироваться к новым вызовам.
-          </p>
+          <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+            {t("services_section_title")}
+          </h2>
+          <p className="text-gray-300 mb-6">{t("services_section_text")}</p>
           <Link href="/services" className="text-[#9ADE20] hover:underline">
-            Подробнее →
+            {t("services_section_link")}
           </Link>
         </div>
         <img
@@ -138,17 +144,16 @@ export default function HomeClient() {
           />
           <div className="order-1 md:order-2">
             <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
-              Сотрудничество
+              {t("cooperation_section_title")}
             </h2>
             <p className="text-gray-300 mb-6">
-              Мы открыты для долгосрочных партнёрских отношений и совместных
-              проектов с компаниями по всему миру.
+              {t("cooperation_section_text")}
             </p>
             <Link
               href="/cooperation"
               className="text-[#9ADE20] hover:underline"
             >
-              Подробнее →
+              {t("cooperation_section_link")}
             </Link>
           </div>
         </div>
@@ -156,13 +161,12 @@ export default function HomeClient() {
 
       <section className="py-10 grid md:grid-cols-2 gap-12 items-center container">
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">Про нас</h2>
-          <p className="text-gray-300 mb-6">
-            Наша миссия — внедрять инновации, помогать бизнесу и создавать
-            ценность для общества.
-          </p>
+          <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+            {t("about_section_title")}
+          </h2>
+          <p className="text-gray-300 mb-6">{t("about_section_text")}</p>
           <Link href="/about" className="text-[#9ADE20] hover:underline">
-            Подробнее →
+            {t("about_section_link")}
           </Link>
         </div>
         <img
@@ -182,13 +186,12 @@ export default function HomeClient() {
             draggable={false}
           />
           <div className="order-1 md:order-2">
-            <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">Контакты</h2>
-            <p className="text-gray-300 mb-6">
-              Свяжитесь с нами для консультации, сотрудничества или получения
-              дополнительной информации.
-            </p>
+            <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
+              {t("contacts_section_title")}
+            </h2>
+            <p className="text-gray-300 mb-6">{t("contacts_section_text")}</p>
             <Link href="/contacts" className="text-[#9ADE20] hover:underline">
-              Подробнее →
+              {t("contacts_section_link")}
             </Link>
           </div>
         </div>

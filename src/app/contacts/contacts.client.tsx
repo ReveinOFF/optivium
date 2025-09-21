@@ -4,8 +4,11 @@ import { LOCALES } from "@/utils/constants";
 import Link from "next/link";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function ContactsClient({ lang }: { lang: string }) {
+  const t = useTranslations("Main");
+
   const getLang = useMemo(() => {
     return LOCALES.find((item) => item.code === lang)?.code;
   }, [lang]);
@@ -13,14 +16,13 @@ export default function ContactsClient({ lang }: { lang: string }) {
   return (
     <>
       <section className="bg-[#031827] text-center grid gap-2 py-4 rounded-br-3xl rounded-bl-3xl mx-2.5">
-        <h1 className="content">Contacts</h1>
-        <p className="title max-w-[700px] mx-auto">
-          Зв'яжіться з нами будь яким зручним способом
-        </p>
+        <h1 className="content">{t("contacts_title")}</h1>
+        <p className="title max-w-[700px] mx-auto">{t("contacts_subtitle")}</p>
       </section>
 
       <section className="mt-2.5 bg-[#031827] p-10 rounded-3xl mx-2.5">
         <div className="container grid grid-cols-4 gap-5">
+          {/* Instagram */}
           <div className="relative border-[#ffffffb1] border-b-[1px] rounded-3xl px-5 py-10 bg-[#031a2b] shadow-[0_-6px_10px_-7px_#000]">
             <img
               src="/assets/icons/instagram.png"
@@ -28,7 +30,7 @@ export default function ContactsClient({ lang }: { lang: string }) {
               className="absolute right-3 top-3 h-7 w-7 object-contain"
               draggable={false}
             />
-            <p className="mb-2 content">Instagram:</p>
+            <p className="mb-2 content">{t("contacts_instagram")}</p>
             <Link
               href="https://www.instagram.com/optivium.eu"
               className="underline hover:text-[#9ADE20]"
@@ -37,6 +39,8 @@ export default function ContactsClient({ lang }: { lang: string }) {
               optivium.eu
             </Link>
           </div>
+
+          {/* Phone UA */}
           <div className="relative border-[#ffffffb1] border-b-[1px] rounded-3xl px-5 py-10 bg-[#031a2b] shadow-[0_-6px_10px_-7px_#000]">
             <img
               src="/assets/icons/phone.png"
@@ -44,7 +48,7 @@ export default function ContactsClient({ lang }: { lang: string }) {
               className="absolute right-3 top-3 h-7 w-7 object-contain white-filter"
               draggable={false}
             />
-            <p className="mb-2 content">Phone (Ukraine):</p>
+            <p className="mb-2 content">{t("contacts_phone_ua")}</p>
             <Link
               href="tel:+380976619127"
               className="underline hover:text-[#9ADE20]"
@@ -52,6 +56,8 @@ export default function ContactsClient({ lang }: { lang: string }) {
               +38 (097) 661 91 27
             </Link>
           </div>
+
+          {/* Phone PL */}
           <div className="relative border-[#ffffffb1] border-b-[1px] rounded-3xl px-5 py-10 bg-[#031a2b] shadow-[0_-6px_10px_-7px_#000]">
             <img
               src="/assets/icons/phone.png"
@@ -59,7 +65,7 @@ export default function ContactsClient({ lang }: { lang: string }) {
               className="absolute right-3 top-3 h-7 w-7 object-contain white-filter"
               draggable={false}
             />
-            <p className="mb-2 content">Phone (Poland):</p>
+            <p className="mb-2 content">{t("contacts_phone_pl")}</p>
             <Link
               href="tel:+48503064329"
               className="underline hover:text-[#9ADE20]"
@@ -67,6 +73,8 @@ export default function ContactsClient({ lang }: { lang: string }) {
               +48 503 064 329
             </Link>
           </div>
+
+          {/* Email */}
           <div className="relative border-[#ffffffb1] border-b-[1px] rounded-3xl px-5 py-10 bg-[#031a2b] shadow-[0_-6px_10px_-7px_#000]">
             <img
               src="/assets/icons/email.png"
@@ -74,8 +82,11 @@ export default function ContactsClient({ lang }: { lang: string }) {
               className="absolute right-3 top-3 h-7 w-7 object-contain white-filter"
               draggable={false}
             />
-            <p className="mb-2 content">Email:</p>
-            <Link href="" className="underline hover:text-[#9ADE20]">
+            <p className="mb-2 content">{t("contacts_email")}</p>
+            <Link
+              href="mailto:info@optivium.eu"
+              className="underline hover:text-[#9ADE20]"
+            >
               info@optivium.eu
             </Link>
           </div>
@@ -97,15 +108,15 @@ export default function ContactsClient({ lang }: { lang: string }) {
             allowFullScreen
           />
           <div className="p-8 grid gap-4 shadow-[inset_0_13px_11px_-5px_#000]">
-            <h2 className="title text-[#9ADE20]">Офіс в Україні</h2>
+            <h2 className="title text-[#9ADE20]">{t("contacts_office_ua")}</h2>
             <div>
-              <p className="content mb-1">Режим роботи:</p>
-              <p>Пн–Чт: 9:00 – 18:00</p>
-              <p>Пт: 9:00 – 17:00</p>
+              <p className="content mb-1">{t("contacts_working_hours")}</p>
+              <p>{t("contacts_schedule_ua.mon_thu")}</p>
+              <p>{t("contacts_schedule_ua.fri")}</p>
             </div>
             <div>
-              <p className="content mb-1">Адреса:</p>
-              <p>вул. Степана Бандери, 19, Рівне, Рівненська область, 33000</p>
+              <p className="content mb-1">{t("contacts_address")}</p>
+              <p>{t("contacts_address_ua")}</p>
             </div>
           </div>
           <motion.img
@@ -132,14 +143,14 @@ export default function ContactsClient({ lang }: { lang: string }) {
             allowFullScreen
           />
           <div className="p-8 grid gap-4 shadow-[inset_0_13px_11px_-5px_#000]">
-            <h2 className="title text-[#9ADE20]">Офіс в Польші</h2>
+            <h2 className="title text-[#9ADE20]">{t("contacts_office_pl")}</h2>
             <div>
-              <p className="content mb-1">Режим роботи:</p>
-              <p>Пн–Чт: 9:00 – 17:00</p>
+              <p className="content mb-1">{t("contacts_working_hours")}</p>
+              <p>{t("contacts_schedule_pl.mon_thu")}</p>
             </div>
             <div>
-              <p className="content mb-1">Адреса:</p>
-              <p>ul. Powstańców Śląskich 7a, 53-332 Wrocław</p>
+              <p className="content mb-1">{t("contacts_address")}</p>
+              <p>{t("contacts_address_pl")}</p>
             </div>
           </div>
           <motion.img
