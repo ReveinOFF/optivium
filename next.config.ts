@@ -3,12 +3,13 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self';
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' ${process.env.API_URL} blob: data:;
-    media-src 'self' ${process.env.API_URL};
-    connect-src 'self' ${process.env.API_URL};
-    font-src 'self';
+    script-src 'self' https://maps.googleapis.com https://maps.gstatic.com 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' blob: data: https://maps.gstatic.com https://maps.googleapis.com;
+    media-src 'self';
+    connect-src 'self';
+    font-src 'self' https://fonts.gstatic.com;
+    frame-src 'self' https://www.google.com https://maps.google.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
@@ -43,14 +44,14 @@ const nextConfig: NextConfig = {
             key: "Cache-Control",
             value: "no-cache, no-store, must-revalidate",
           },
-          // {
-          //   key: "Content-Security-Policy",
-          //   value: cspHeader.replace(/\n/g, ""),
-          // },
-          // {
-          //   key: "Strict-Transport-Security",
-          //   value: "max-age=31536000; includeSubDomains; preload",
-          // },
+          {
+            key: "Content-Security-Policy",
+            value: cspHeader.replace(/\n/g, ""),
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains; preload",
+          },
         ],
       },
       {

@@ -9,8 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     { url: `${process.env.SITE_URL}/about`, lastModified: new Date() },
     { url: `${process.env.SITE_URL}/contacts`, lastModified: new Date() },
-    { url: `${process.env.SITE_URL}/cookies`, lastModified: new Date() },
-    { url: `${process.env.SITE_URL}/privacy`, lastModified: new Date() },
     { url: `${process.env.SITE_URL}/terms`, lastModified: new Date() },
     { url: `${process.env.SITE_URL}/services`, lastModified: new Date() },
     { url: `${process.env.SITE_URL}/cooperation`, lastModified: new Date() },

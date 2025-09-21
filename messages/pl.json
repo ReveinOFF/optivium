@@ -65,6 +65,11 @@
     "contacts_section_link": "Dowiedz się więcej →"
   },
   "Contacts": {
+    "meta": {
+      "title": "Kontakty | Optivium",
+      "description": "Skontaktuj się z Optivium, aby uzyskać konsultację, nawiązać współpracę lub uzyskać dodatkowe informacje. Jesteśmy dostępni pod numerem telefonu, adresem e-mail oraz w mediach społecznościowych."
+    },
+
     "contacts_title": "Kontakt",
     "contacts_subtitle": "Skontaktuj się z nami w dogodny dla Ciebie sposób",
 
@@ -91,6 +96,11 @@
     "contacts_address_pl": "ul. Powstańców Śląskich 7a, 53-332 Wrocław"
   },
   "AboutUs": {
+    "meta": {
+      "title": "O nas | Optivium",
+      "description": "Wprowadzamy innowacje, dostarczamy niezawodne rozwiązania i rozwijamy współpracę międzynarodową, aby zapewnić sukces biznesowy."
+    },
+
     "about_us_1": "O nas",
     "about_us_2": "Optivium to firma konsultingowa specjalizująca się w rozwiązaniach w zakresie międzynarodowego rekrutowania. Pomagamy firmom efektywnie tworzyć zespoły, znajdować wykwalifikowanych specjalistów i optymalizować procesy rekrutacyjne na poziomie globalnym.",
     "mission_1": "Nasza misja",
@@ -128,6 +138,11 @@
     "advantages_5": "Skupienie na wyniku – ważne jest dla nas, aby Twój biznes otrzymał właściwych ludzi we właściwym czasie."
   },
   "Cooperation": {
+    "meta": {
+      "title": "Współpraca | Optivium",
+      "description": "Jesteśmy otwarci na długoterminową współpracę partnerską i wspólne projekty z firmami z całego świata."
+    },
+
     "cooperation_1": "Współpraca",
     "cooperation_2": "Jesteśmy otwarci na partnerstwo: wspólne projekty, integracje i strategiczne alianse, które przynoszą korzyści obu stronom.",
     "cooperation_3": "Skontaktuj się",
@@ -151,6 +166,11 @@
     "cooperation_21": "Zostaw zgłoszenie — przygotujemy ofertę i skontaktujemy się w dogodnym dla Ciebie czasie."
   },
   "Services": {
+    "meta": {
+      "title": "Nasze usługi | Optivium",
+      "description": "Oferujemy szeroki zakres rozwiązań dla biznesu, w tym rekrutację, sprzedaż, finanse, inwestycje i doradztwo."
+    },
+
     "services_1": "Nasze usługi",
     "services_2": "Rekrutacja, sprzedaż, finanse, inwestycje i analityka – kompleksowe rozwiązania dla Twojego biznesu.",
     "services_3": "Rekrutacja pracowników – od stanowisk produkcyjnych po wysoko wykwalifikowanych specjalistów.",
@@ -228,5 +248,11 @@
     "services_75": "Chcesz omówić projekt?",
     "services_76": "Skontaktuj się z nami, a my dobierzemy najlepsze rozwiązanie, które pomoże Twojemu biznesowi rosnąć i się rozwijać.",
     "services_77": "Skontaktuj się"
+  },
+  "Terms": {
+    "meta": {
+      "title": "Warunki | Optivium",
+      "description": "Zapoznaj się z warunkami użytkowania, regulaminem i informacjami prawnymi firmy Optivium."
+    }
   }
 }

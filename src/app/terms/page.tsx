@@ -1,38 +1,45 @@
+"use server";
+
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { headers } from "next/headers";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Terms of Service — SpreadHunt | User Agreement and Guidelines",
-  description:
-    "Review SpreadHunt’s Terms of Service to understand the rules, responsibilities, and legal agreements for using our crypto arbitrage platform.",
-  keywords: [
-    "SpreadHunt terms of service",
-    "user agreement",
-    "legal terms",
-    "platform rules",
-    "crypto arbitrage terms",
-    "user responsibilities",
-    "service conditions",
-  ],
-  openGraph: {
-    title: "Terms of Service — SpreadHunt | User Agreement and Guidelines",
-    description:
-      "Learn about the terms and conditions that govern your use of SpreadHunt’s crypto arbitrage services.",
-    url: "http://localhost:3000/terms",
-  },
-  twitter: {
-    title: "Terms of Service — SpreadHunt | User Agreement and Guidelines",
-    description:
-      "Understand the legal terms and user responsibilities when using SpreadHunt.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Terms");
+  const pathname = (await headers()).get("x-pathname") as string;
 
-export default function TermsPolicy() {
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+
+    openGraph: {
+      title: t("meta.title"),
+      description: t("meta.description"),
+      type: "website",
+      url: process.env.SITE_URL + pathname,
+    },
+
+    twitter: {
+      title: t("meta.title"),
+      description: t("meta.description"),
+      card: "summary",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    alternates: {
+      canonical: process.env.SITE_URL + pathname,
+    },
+  };
+}
+
+export default async function TermsPolicy() {
+  const t = await getTranslations("Terms");
+
   return (
     <>
       <section className="bg-[#031827] text-center py-4 rounded-br-3xl rounded-bl-3xl mx-2.5">

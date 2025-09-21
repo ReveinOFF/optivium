@@ -65,6 +65,11 @@
     "contacts_section_link": "Learn more →"
   },
   "Contacts": {
+    "meta": {
+      "title": "Contacts | Optivium",
+      "description": "Contact Optivium for consultation, cooperation, or additional information. We are available by phone, email, and social media."
+    },
+
     "contacts_title": "Contacts",
     "contacts_subtitle": "Get in touch with us in any convenient way",
 
@@ -91,6 +96,11 @@
     "contacts_address_pl": "7a Powstańców Śląskich St., 53-332 Wrocław"
   },
   "AboutUs": {
+    "meta": {
+      "title": "About us | Optivium",
+      "description": "We implement innovations, provide reliable solutions, and develop international cooperation for successful business."
+    },
+
     "about_us_1": "About Us",
     "about_us_2": "Optivium is a consulting company specializing in international recruitment solutions. We help businesses effectively build teams, find qualified specialists, and optimize HR processes globally.",
     "mission_1": "Our Mission",
@@ -128,6 +138,11 @@
     "advantages_5": "Result focus – it is important to us that your business gets the right people at the right time."
   },
   "Cooperation": {
+    "meta": {
+      "title": "Cooperation | Optivium",
+      "description": "We are open to long-term partnerships and joint projects with companies around the world."
+    },
+
     "cooperation_1": "Cooperation",
     "cooperation_2": "We are open to partnership: joint projects, integrations, and strategic alliances that benefit both sides.",
     "cooperation_3": "Contact",
@@ -151,6 +166,11 @@
     "cooperation_21": "Leave a request — we will prepare an offer and contact you at a convenient time."
   },
   "Services": {
+    "meta": {
+      "title": "Our services | Optivium",
+      "description": "We offer a wide range of business solutions, including recruiting, sales, finance, investment, and consulting."
+    },
+
     "services_1": "Our Services",
     "services_2": "Recruitment, sales, finance, investments, and analytics – comprehensive solutions for your business.",
     "services_3": "Employee Recruitment – from production positions to highly skilled specialists.",
@@ -228,5 +248,11 @@
     "services_75": "Want to Discuss a Project?",
     "services_76": "Contact us, and we will select the best solution to help your business grow and develop.",
     "services_77": "Contact Us"
+  },
+  "Terms": {
+    "meta": {
+      "title": "Terms & Conditions | Optivium",
+      "description": "Please review Optivium's terms of use, rules, and legal information."
+    }
   }
 }

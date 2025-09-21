@@ -4,7 +4,8 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Optivium",
     short_name: "Optivium",
-    description: "",
+    description:
+      "Welcome to Optivium: innovative solutions, reliability, flexibility, and international cooperation for the successful development of your business.",
     start_url: "/",
     theme_color: "#031827",
     background_color: "#031827",
