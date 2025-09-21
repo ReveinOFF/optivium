@@ -21,7 +21,7 @@ export default function ContactsClient({ lang }: { lang: string }) {
       </section>
 
       <section className="mt-2.5 bg-[#031827] p-10 rounded-3xl mx-2.5">
-        <div className="container grid grid-cols-4 gap-5">
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* Instagram */}
           <div className="relative border-[#ffffffb1] border-b-[1px] rounded-3xl px-5 py-10 bg-[#031a2b] shadow-[0_-6px_10px_-7px_#000]">
             <img

@@ -59,7 +59,7 @@ img {
 }
 
 .title {
-  @apply text-3xl font-bold font-[Exo_2];
+  @apply md:text-3xl text-2xl font-bold font-[Exo_2];
 }
 
 .subtitle {
