@@ -10,13 +10,13 @@ export default function CooperationClient() {
   return (
     <>
       <section className="py-10 bg-[#031827] rounded-br-3xl rounded-bl-3xl mx-2.5">
-        <div className="container grid md:grid-cols-2 gap-12 items-center">
+        <div className="container grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl font-bold mb-6"
+              className="text-5xl md:text-6xl max-sm:text-3xl font-bold mb-6"
             >
               {t("cooperation_1")}
             </motion.h1>

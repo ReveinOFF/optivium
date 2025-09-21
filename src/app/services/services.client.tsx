@@ -17,7 +17,7 @@ export default function ServicesClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl font-bold mb-6"
+              className="text-5xl md:text-6xl max-sm:text-3xl font-bold mb-6"
             >
               {t("services_1")}
             </motion.h1>
@@ -37,7 +37,7 @@ export default function ServicesClient() {
 
       {/* Our Services */}
       <section className="container py-16 text-center">
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
+        <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
           <div className="bg-[#031827] rounded-2xl p-6 shadow-md text-sm">
             <strong>{t("services_3")}</strong>
           </div>
@@ -65,7 +65,7 @@ export default function ServicesClient() {
           <h2 className="text-3xl font-bold mb-8 text-[#9ADE20]">
             {t("services_9")}
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
+          <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               {t("services_10")}
             </div>
@@ -84,7 +84,7 @@ export default function ServicesClient() {
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               {t("services_15")}
             </div>
-            <div className="bg-[#052034] rounded-xl p-5 shadow-sm col-span-3">
+            <div className="bg-[#052034] rounded-xl p-5 shadow-sm col-span-2 md:col-span-3 max-sm:col-span-1">
               {t("services_16")}
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function ServicesClient() {
           <h2 className="text-3xl font-bold mb-8 text-[#9ADE20]">
             {t("services_17")}
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
+          <div className="grid md:grid-cols-3 gap-2.5 text-gray-300">
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               {t("services_18")}
             </div>
@@ -107,7 +107,7 @@ export default function ServicesClient() {
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               {t("services_20")}
             </div>
-            <div className="bg-[#052034] rounded-xl p-5 shadow-sm col-span-3">
+            <div className="bg-[#052034] rounded-xl p-5 shadow-sm md:col-span-3">
               {t("services_21")}
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function ServicesClient() {
       </section>
 
       {/* Sales */}
-      <section className="container py-24 grid md:grid-cols-2 gap-12 items-start">
+      <section className="container py-24 grid md:grid-cols-2 gap-2.5 md:gap-12 items-start">
         <div>
           <h2 className="text-3xl font-bold mb-6 text-[#9ADE20]">
             {t("services_22")}
@@ -147,7 +147,7 @@ export default function ServicesClient() {
 
       {/* Finance */}
       <section className="py-10 bg-[#031827] rounded-3xl mx-2.5">
-        <div className="container grid md:grid-cols-2 gap-12 items-start">
+        <div className="container grid md:grid-cols-2 gap-2.5 md:gap-12 items-start">
           <img
             src="/assets/images/services_3.png"
             alt="Finance"
@@ -159,7 +159,7 @@ export default function ServicesClient() {
               {t("services_35")}
             </h2>
             <p className="mb-6">{t("services_36")}</p>
-            <div className="grid grid-cols-2 gap-2.5">
+            <div className="grid max-sm:grid-cols-1 grid-cols-2 gap-2.5">
               <ul className="space-y-2 bg-[#052034] rounded-xl p-5 shadow-sm">
                 <li>{t("services_37")}</li>
                 <li>{t("services_38")}</li>
@@ -181,7 +181,7 @@ export default function ServicesClient() {
                 <li>{t("services_48")}</li>
                 <li>{t("services_49")}</li>
               </ul>
-              <ul className="space-y-2 bg-[#052034] rounded-xl p-5 shadow-sm col-span-2">
+              <ul className="space-y-2 bg-[#052034] rounded-xl p-5 shadow-sm sm:col-span-2">
                 <li>{t("services_50")}</li>
                 <li>{t("services_51")}</li>
                 <li>{t("services_52")}</li>

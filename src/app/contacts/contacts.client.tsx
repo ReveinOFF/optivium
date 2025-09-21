@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 export default function ContactsClient({ lang }: { lang: string }) {
-  const t = useTranslations("Main");
+  const t = useTranslations("Contacts");
 
   const getLang = useMemo(() => {
     return LOCALES.find((item) => item.code === lang)?.code;

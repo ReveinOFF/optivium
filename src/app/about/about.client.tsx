@@ -9,7 +9,7 @@ export default function AboutUsClient() {
   return (
     <>
       <section className="py-10 bg-[#031827] rounded-br-3xl rounded-bl-3xl mx-2.5">
-        <div className="container py-10 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container py-10 grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -61,7 +61,7 @@ export default function AboutUsClient() {
           <h2 className="text-3xl font-bold mb-8 text-[#9ADE20]">
             {t("services_1")}
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
+          <div className="grid max-sm:grid-rows-4 max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               <strong>{t("services_2")}</strong>
             </div>
@@ -71,7 +71,7 @@ export default function AboutUsClient() {
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               <strong>{t("services_4")}</strong>
             </div>
-            <div className="bg-[#052034] rounded-xl p-5 shadow-sm col-start-2">
+            <div className="bg-[#052034] rounded-xl p-5 shadow-sm md:col-start-2">
               <strong>{t("services_5")}</strong>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function AboutUsClient() {
           <h2 className="text-3xl font-bold mb-8 text-[#9ADE20]">
             {t("advantages_1")}
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
+          <div className="grid max-sm:grid-cols-1 max-sm:grid-rows-4 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               <strong>{t("advantages_2")}</strong>
             </div>
@@ -130,7 +130,7 @@ export default function AboutUsClient() {
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               <strong>{t("advantages_4")}</strong>
             </div>
-            <div className="bg-[#052034] rounded-xl p-5 shadow-sm col-start-2">
+            <div className="bg-[#052034] rounded-xl p-5 shadow-sm md:col-start-2">
               <strong>{t("advantages_5")}</strong>
             </div>
           </div>
