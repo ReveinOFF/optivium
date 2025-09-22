@@ -1,16 +1,18 @@
 "use client";
 
 import { setUserLocale } from "@/services/locale";
-import { Locale } from "@/utils/types";
+import { LOCALES } from "@/utils/constants";
 import { useTransition } from "react";
 
 export default function useLang() {
   const [isPending, startTransition] = useTransition();
 
-  function changeLang(value: string) {
-    const locale = value as Locale;
+  function changeLang(code: string) {
+    const found = LOCALES.find((l) => l.code === code);
+    if (!found) return;
+
     startTransition(() => {
-      setUserLocale(locale);
+      setUserLocale(found.code);
     });
   }
 
