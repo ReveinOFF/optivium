@@ -31,7 +31,7 @@ export default function CooperationClient() {
             </div>
           </div>
           <motion.img
-            src="/assets/images/cooperation_1.png"
+            src="/assets/images/cooperation_1.jpg"
             alt={t("cooperation_1")}
             className="rounded-2xl shadow-lg"
             initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ export default function CooperationClient() {
       <section className="py-10 bg-[#031827] rounded-2xl mx-2.5 mb-2.5">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="/assets/images/cooperation_2.png"
+            src="/assets/images/cooperation_2.jpg"
             alt={t("cooperation_13")}
             className="rounded-2xl shadow-lg"
             draggable={false}
@@ -105,7 +105,7 @@ export default function CooperationClient() {
           </Link>
         </div>
         <img
-          src="/assets/images/cooperation_3.png"
+          src="/assets/images/cooperation_3.jpg"
           alt={t("cooperation_16")}
           className="rounded-2xl shadow-lg"
           draggable={false}
@@ -115,7 +115,7 @@ export default function CooperationClient() {
       <section className="py-10 bg-[#031827] rounded-2xl mx-2.5">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="/assets/images/cooperation_4.png"
+            src="/assets/images/cooperation_4.jpg"
             alt={t("cooperation_18")}
             className="rounded-2xl shadow-lg"
             draggable={false}

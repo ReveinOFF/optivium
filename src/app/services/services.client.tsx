@@ -24,7 +24,7 @@ export default function ServicesClient() {
             <p className="text-lg text-gray-300 mb-8">{t("services_2")}</p>
           </div>
           <motion.img
-            src="/assets/images/services_1.png"
+            src="/assets/images/services_1.jpg"
             alt="Services Hero"
             className="rounded-2xl shadow-lg"
             initial={{ opacity: 0 }}
@@ -138,7 +138,7 @@ export default function ServicesClient() {
           </ul>
         </div>
         <img
-          src="/assets/images/services_2.png"
+          src="/assets/images/services_2.jpg"
           alt="Sales"
           className="rounded-2xl shadow-lg"
           draggable={false}
@@ -149,7 +149,7 @@ export default function ServicesClient() {
       <section className="py-10 bg-[#031827] rounded-3xl mx-2.5">
         <div className="container grid md:grid-cols-2 gap-2.5 md:gap-12 items-start">
           <img
-            src="/assets/images/services_3.png"
+            src="/assets/images/services_3.jpg"
             alt="Finance"
             className="rounded-2xl shadow-lg order-2 md:order-1"
             draggable={false}

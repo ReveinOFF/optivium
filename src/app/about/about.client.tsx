@@ -22,7 +22,7 @@ export default function AboutUsClient() {
             <p className="text-lg text-gray-300 mb-8">{t("about_us_2")}</p>
           </div>
           <motion.img
-            src="/assets/images/aboutus_1.png"
+            src="/assets/images/aboutus_1.jpg"
             alt={t("about_us_1")}
             className="rounded-2xl shadow-lg"
             initial={{ opacity: 0 }}

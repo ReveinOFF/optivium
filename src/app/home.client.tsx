@@ -37,7 +37,7 @@ export default function HomeClient() {
             </div>
           </div>
           <motion.img
-            src="/assets/images/main.png"
+            src="/assets/images/main.jpg"
             alt="Hero Illustration"
             className="rounded-2xl shadow-lg"
             initial={{ opacity: 0 }}
@@ -127,7 +127,7 @@ export default function HomeClient() {
           </Link>
         </div>
         <img
-          src="/assets/images/services_1.png"
+          src="/assets/images/services_1.jpg"
           alt="Services"
           className="rounded-2xl shadow-lg"
           draggable={false}
@@ -137,7 +137,7 @@ export default function HomeClient() {
       <section className="py-10 bg-[#031827] rounded-3xl mx-2.5">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="/assets/images/cooperation_1.png"
+            src="/assets/images/cooperation_1.jpg"
             alt="Cooperation"
             className="rounded-2xl shadow-lg order-2 md:order-1"
             draggable={false}
@@ -170,7 +170,7 @@ export default function HomeClient() {
           </Link>
         </div>
         <img
-          src="/assets/images/aboutus_1.png"
+          src="/assets/images/aboutus_1.jpg"
           alt="About Us"
           className="rounded-2xl shadow-lg"
           draggable={false}
@@ -180,7 +180,7 @@ export default function HomeClient() {
       <section className="py-10 bg-[#031827] rounded-3xl mx-2.5">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="/assets/images/contacts.png"
+            src="/assets/images/contacts.jpg"
             alt="Contacts"
             className="rounded-2xl shadow-lg order-2 md:order-1"
             draggable={false}

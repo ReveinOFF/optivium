@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { getUserLocale } from "@/services/locale";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import metaImage from "../../public/assets/images/meta.jpg";
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = await getUserLocale();
@@ -25,12 +26,27 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       siteName: "Optivium",
       locale: lang,
-      images: "/assets/images/main.png",
+      images: [
+        {
+          url: metaImage.src,
+          width: metaImage.width,
+          height: metaImage.height,
+          alt: "Optivium preview",
+        },
+      ],
       type: "website",
     },
     twitter: {
-      images: "/assets/images/main.png",
+      images: [
+        {
+          url: metaImage.src,
+          width: metaImage.width,
+          height: metaImage.height,
+          alt: "Optivium preview",
+        },
+      ],
       site: process.env.TWITTER,
+      card: "summary_large_image",
     },
     other: {
       language: lang,
