@@ -164,9 +164,10 @@ export default async function TermsPolicy() {
           7. Disclaimer of Warranties
         </h2>
         <p className="content">
-          The Service is provided "as is" and "as available" without warranties
-          of any kind, either express or implied. We do not guarantee that the
-          Service will be error-free, secure, or continuously available.
+          The Service is provided &quot;as is&quot; and &quot;as available&quot;
+          without warranties of any kind, either express or implied. We do not
+          guarantee that the Service will be error-free, secure, or continuously
+          available.
         </p>
         <p className="content">
           Use of our parser does not guarantee any profit. Our service is a tool
