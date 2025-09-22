@@ -154,7 +154,7 @@ export default function ContactsClient({ lang }: { lang: string }) {
             </div>
           </div>
           <motion.img
-            src="/assets/images/contacts_2.png"
+            src="/assets/images/contacts_2.jpg"
             alt="Office"
             className="rounded-b-2xl shadow-lg h-[350px] w-full object-cover"
             initial={{ opacity: 0 }}

@@ -26,25 +26,21 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       siteName: "Optivium",
       locale: lang,
-      images: [
-        {
-          url: metaImage.src,
-          width: metaImage.width,
-          height: metaImage.height,
-          alt: "Optivium preview",
-        },
-      ],
+      images: {
+        url: metaImage.src,
+        width: metaImage.width,
+        height: metaImage.height,
+        alt: "Optivium preview",
+      },
       type: "website",
     },
     twitter: {
-      images: [
-        {
-          url: metaImage.src,
-          width: metaImage.width,
-          height: metaImage.height,
-          alt: "Optivium preview",
-        },
-      ],
+      images: {
+        url: metaImage.src,
+        width: metaImage.width,
+        height: metaImage.height,
+        alt: "Optivium preview",
+      },
       site: process.env.TWITTER,
       card: "summary_large_image",
     },
@@ -52,6 +48,15 @@ export async function generateMetadata(): Promise<Metadata> {
       language: lang,
       "apple-mobile-web-app-capable": "yes",
       "mobile-web-app-capable": "yes",
+    },
+    alternates: {
+      canonical: "/",
+      languages: {
+        en: "/",
+        ru: "/",
+        uk: "/",
+        pl: "/",
+      },
     },
   };
 }
