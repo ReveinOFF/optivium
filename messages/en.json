@@ -89,7 +89,8 @@
       "fri": "Fri: 9:00 – 17:00"
     },
     "contacts_schedule_pl": {
-      "mon_thu": "Mon–Thu: 9:00 – 17:00"
+      "mon_thu": "Mon–Thu: 9:00 – 18:00",
+      "fri": "Fri: 9:00 – 17:00"
     },
 
     "contacts_address_ua": "19 Stepana Bandery St., Rivne, Rivne region, 33000",
@@ -102,7 +103,7 @@
     },
 
     "about_us_1": "About Us",
-    "about_us_2": "Optivium is a consulting company specializing in international recruitment solutions. We help businesses effectively build teams, find qualified specialists, and optimize HR processes globally.",
+    "about_us_2": "Optivium is a company specializing in international consulting solutions. We help businesses effectively build teams, find qualified specialists, and optimize HR processes globally.",
     "mission_1": "Our Mission",
     "mission_2": "To help businesses and society grow through modern solutions that combine recruitment, consulting, and analytics. We make companies stronger through people.",
     "values_1": "Our Values",
@@ -172,9 +173,9 @@
     },
 
     "services_1": "Our Services",
-    "services_2": "Recruitment, sales, finance, investments, and analytics – comprehensive solutions for your business.",
+    "services_2": "HR, sales, finance, investments, and analytics – comprehensive solutions for your business.",
     "services_3": "Employee Recruitment – from production positions to highly skilled specialists.",
-    "services_4": "International Recruitment – selecting candidates from Asia and Africa.",
+    "services_4": "International Recruitment – selecting candidates from Asia, Latin America, and Europe.",
     "services_5": "Candidate Screening and Verification – assessing skills and experience.",
     "services_6": "Work Legalization for Foreigners – full document support.",
     "services_7": "Onboarding and Adaptation Support – helping employees start effectively.",
@@ -254,5 +255,6 @@
       "title": "Terms & Conditions | Optivium",
       "description": "Please review Optivium's terms of use, rules, and legal information."
     }
-  }
+  },
+  "Keywords": "Optivium, business solutions, B2B, consulting, recruitment, sales, finance, investments, analytics, cooperation, partners, corporate services, business strategy, process optimization, business consulting, human resources management, investment services, financial analysis, business efficiency, corporate collaboration"
 }

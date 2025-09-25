@@ -89,7 +89,8 @@
       "fri": "Pt: 9:00 – 17:00"
     },
     "contacts_schedule_pl": {
-      "mon_thu": "Pn–Cz: 9:00 – 17:00"
+      "mon_thu": "Pn–Cz: 9:00 – 18:00",
+      "fri": "Pt: 9:00 – 17:00"
     },
 
     "contacts_address_ua": "ul. Stepana Bandery 19, Równe, obwód rówieński, 33000",
@@ -102,7 +103,7 @@
     },
 
     "about_us_1": "O nas",
-    "about_us_2": "Optivium to firma konsultingowa specjalizująca się w rozwiązaniach w zakresie międzynarodowego rekrutowania. Pomagamy firmom efektywnie tworzyć zespoły, znajdować wykwalifikowanych specjalistów i optymalizować procesy rekrutacyjne na poziomie globalnym.",
+    "about_us_2": "Optivium — to firma specjalizująca się w rozwiązaniach w zakresie międzynarodowego doradztwa. Pomagamy firmom efektywnie tworzyć zespoły, znajdować wykwalifikowanych specjalistów i optymalizować procesy rekrutacyjne na poziomie globalnym.",
     "mission_1": "Nasza misja",
     "mission_2": "Pomagamy firmom i społeczeństwu rozwijać się poprzez nowoczesne rozwiązania łączące rekrutację, doradztwo i analitykę. Wzmacniamy firmy dzięki ludziom.",
     "values_1": "Nasze wartości",
@@ -172,9 +173,9 @@
     },
 
     "services_1": "Nasze usługi",
-    "services_2": "Rekrutacja, sprzedaż, finanse, inwestycje i analityka – kompleksowe rozwiązania dla Twojego biznesu.",
+    "services_2": "HR, sprzedaż, finanse, inwestycje i analityka – kompleksowe rozwiązania dla Twojego biznesu.",
     "services_3": "Rekrutacja pracowników – od stanowisk produkcyjnych po wysoko wykwalifikowanych specjalistów.",
-    "services_4": "Międzynarodowa rekrutacja – dobór kandydatów z Azji i Afryki.",
+    "services_4": "Międzynarodowa rekrutacja – dobór kandydatów z Azji, Ameryki Łacińskiej i Europy.",
     "services_5": "Selekcja i weryfikacja kandydatów – ocena kompetencji i doświadczenia.",
     "services_6": "Legalizacja pracy cudzoziemców – pełne wsparcie dokumentacyjne.",
     "services_7": "Onboarding i wsparcie adaptacyjne – pomoc w rozpoczęciu pracy.",
@@ -254,5 +255,6 @@
       "title": "Warunki | Optivium",
       "description": "Zapoznaj się z warunkami użytkowania, regulaminem i informacjami prawnymi firmy Optivium."
     }
-  }
+  },
+  "Keywords": "Optivium, rozwiązania biznesowe, B2B, doradztwo, rekrutacja, sprzedaż, finanse, inwestycje, analityka, współpraca, partnerzy, usługi korporacyjne, strategia biznesowa, optymalizacja procesów, konsulting biznesowy, zarządzanie personelem, usługi inwestycyjne, analiza finansowa, efektywność biznesu, współpraca korporacyjna"
 }

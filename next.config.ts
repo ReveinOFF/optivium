@@ -18,10 +18,7 @@ const cspHeader = `
 `;
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: [
-    "http://localhost:3000",
-    "https://e61e338db0b1.ngrok-free.app",
-  ],
+  allowedDevOrigins: ["http://localhost:3000"],
 
   async headers() {
     return [

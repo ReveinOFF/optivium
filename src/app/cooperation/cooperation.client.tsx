@@ -87,7 +87,7 @@ export default function CooperationClient() {
               {t("cooperation_13")}
             </h3>
             <p className="text-gray-300 mb-4">{t("cooperation_14")}</p>
-            <Link href="#contact" className="text-[#9ADE20] hover:underline">
+            <Link href="/contacts" className="text-[#9ADE20] hover:underline">
               {t("cooperation_15")} →
             </Link>
           </div>
@@ -100,7 +100,7 @@ export default function CooperationClient() {
             {t("cooperation_16")}
           </h3>
           <p className="text-gray-300 mb-4">{t("cooperation_17")}</p>
-          <Link href="#contact" className="text-[#9ADE20] hover:underline">
+          <Link href="/contacts" className="text-[#9ADE20] hover:underline">
             {t("cooperation_15")} →
           </Link>
         </div>
@@ -125,7 +125,7 @@ export default function CooperationClient() {
               {t("cooperation_18")}
             </h3>
             <p className="text-gray-300 mb-4">{t("cooperation_19")}</p>
-            <Link href="#contact" className="text-[#9ADE20] hover:underline">
+            <Link href="/contacts" className="text-[#9ADE20] hover:underline">
               {t("cooperation_15")} →
             </Link>
           </div>

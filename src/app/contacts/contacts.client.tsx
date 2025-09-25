@@ -147,6 +147,7 @@ export default function ContactsClient({ lang }: { lang: string }) {
             <div>
               <p className="content mb-1">{t("contacts_working_hours")}</p>
               <p>{t("contacts_schedule_pl.mon_thu")}</p>
+              <p>{t("contacts_schedule_pl.fri")}</p>
             </div>
             <div>
               <p className="content mb-1">{t("contacts_address")}</p>
@@ -154,7 +155,7 @@ export default function ContactsClient({ lang }: { lang: string }) {
             </div>
           </div>
           <motion.img
-            src="/assets/images/contacts_2.jpg"
+            src="/assets/images/contacts_2.webp"
             alt="Office"
             className="rounded-b-2xl shadow-lg h-[350px] w-full object-cover"
             initial={{ opacity: 0 }}

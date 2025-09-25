@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="w-full py-10 bg-[#031827] rounded-tr-3xl rounded-tl-3xl mt-2.5">
       <div className="flex justify-between items-end container max-md:grid max-md:justify-center max-md:gap-2">
-        <Optivium textSize="text-5xl text-center" />
+        <Optivium className="text-5xl text-center" />
         <button
           onClick={() => window.scrollTo({ behavior: "smooth", top: 0 })}
           className="max-lg:hidden text-[20px] opacity-80 hover:opacity-100 font-[monospace]"

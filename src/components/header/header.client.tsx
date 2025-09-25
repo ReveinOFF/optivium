@@ -61,7 +61,7 @@ export default function HeaderClient({ lang }: { lang: string }) {
             height="50"
             draggable={false}
           />
-          <Optivium textSize="text-2xl" />
+          <Optivium className="text-2xl max-sm:hidden" />
         </Link>
 
         {/* Навигация (desktop) */}

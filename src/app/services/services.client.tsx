@@ -37,6 +37,9 @@ export default function ServicesClient() {
 
       {/* Our Services */}
       <section className="container py-16 text-center">
+        <h2 className="text-3xl font-bold mb-8 text-[#9ADE20]">
+          {t("services_17")}
+        </h2>
         <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-300">
           <div className="bg-[#031827] rounded-2xl p-6 shadow-md text-sm">
             <strong>{t("services_3")}</strong>
@@ -94,9 +97,6 @@ export default function ServicesClient() {
       {/* HR Consulting */}
       <section className="pb-10 bg-[#031827] rounded-b-3xl mx-2.5 text-center">
         <div className="container">
-          <h2 className="text-3xl font-bold mb-8 text-[#9ADE20]">
-            {t("services_17")}
-          </h2>
           <div className="grid md:grid-cols-3 gap-2.5 text-gray-300">
             <div className="bg-[#052034] rounded-xl p-5 shadow-sm">
               {t("services_18")}

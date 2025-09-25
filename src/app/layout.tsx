@@ -1,17 +1,17 @@
 import { NextIntlClientProvider } from "next-intl";
 import "../styles/globals.css";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { getUserLocale } from "@/services/locale";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import metaImage from "../../public/assets/images/meta.jpg";
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = await getUserLocale();
+  const t = await getTranslations();
 
   return {
-    keywords: "",
+    keywords: t("Keywords"),
     metadataBase: new URL(process.env.SITE_URL as string),
     creator: "ReveinOff",
     icons: {
@@ -27,20 +27,21 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Optivium",
       locale: lang,
       images: {
-        url: metaImage.src,
-        width: metaImage.width,
-        height: metaImage.height,
+        url: `${process.env.SITE_URL}/assets/images/meta.jpg`,
+        width: 1024,
+        height: 1024,
         alt: "Optivium preview",
       },
       type: "website",
     },
     twitter: {
       images: {
-        url: metaImage.src,
-        width: metaImage.width,
-        height: metaImage.height,
+        url: `${process.env.SITE_URL}/assets/images/meta.jpg`,
+        width: 1024,
+        height: 1024,
         alt: "Optivium preview",
       },
+      creator: "ReveinOFF",
       site: process.env.TWITTER,
       card: "summary_large_image",
     },
@@ -86,6 +87,14 @@ export default async function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
           rel="stylesheet"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.SITE_URL}/assets/images/meta.jpg`}
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.SITE_URL}/assets/images/meta.jpg`}
         />
       </head>
       <body className="bg-[#000F1B] text-[#ededed] font-[Inter] grid grid-rows-[auto_1fr_auto] min-h-screen">
