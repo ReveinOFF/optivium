@@ -50,15 +50,6 @@ export async function generateMetadata(): Promise<Metadata> {
       "apple-mobile-web-app-capable": "yes",
       "mobile-web-app-capable": "yes",
     },
-    alternates: {
-      canonical: "/",
-      languages: {
-        en: "/",
-        ru: "/",
-        uk: "/",
-        pl: "/",
-      },
-    },
   };
 }
 
