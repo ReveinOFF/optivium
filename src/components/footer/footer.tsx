@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useMemo } from "react";
 import Optivium from "../optivium/optivium";
 import { useTranslations } from "next-intl";

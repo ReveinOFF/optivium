@@ -2,12 +2,10 @@
 
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { headers } from "next/headers";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Terms");
-  const pathname = (await headers()).get("x-pathname") as string;
 
   return {
     title: t("meta.title"),
@@ -17,7 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("meta.title"),
       description: t("meta.description"),
       type: "website",
-      url: process.env.SITE_URL + pathname,
     },
 
     twitter: {
@@ -29,10 +26,6 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: {
       index: true,
       follow: true,
-    },
-
-    alternates: {
-      canonical: process.env.SITE_URL + pathname,
     },
   };
 }

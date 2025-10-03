@@ -1,3 +1,4 @@
+import { LOCALES } from "@/utils/constants";
 import { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
@@ -5,42 +6,29 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date().toISOString().split("T")[0];
 
-  return [
-    {
-      url: process.env.SITE_URL as string,
+  const pages = ["", "about", "contacts", "terms", "services", "cooperation"];
+
+  const urls: MetadataRoute.Sitemap = [];
+
+  pages.forEach((page) => {
+    urls.push({
+      url: `${process.env.SITE_URL}${page ? "/" + page : ""}`,
       lastModified: today,
       changeFrequency: "yearly",
-      priority: 1,
-    },
-    {
-      url: `${process.env.SITE_URL}/about`,
-      lastModified: today,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: `${process.env.SITE_URL}/contacts`,
-      lastModified: today,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: `${process.env.SITE_URL}/terms`,
-      lastModified: today,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: `${process.env.SITE_URL}/services`,
-      lastModified: today,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: `${process.env.SITE_URL}/cooperation`,
-      lastModified: today,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-  ];
+      priority: page === "" ? 1 : 0.8,
+    });
+  });
+
+  LOCALES.forEach((locale) => {
+    pages.forEach((page) => {
+      urls.push({
+        url: `${process.env.SITE_URL}/${locale.code}${page ? "/" + page : ""}`,
+        lastModified: today,
+        changeFrequency: "yearly",
+        priority: page === "" ? 1 : 0.8,
+      });
+    });
+  });
+
+  return urls;
 }

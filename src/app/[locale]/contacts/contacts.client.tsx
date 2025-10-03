@@ -1,7 +1,7 @@
 "use client";
 
 import { LOCALES } from "@/utils/constants";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";

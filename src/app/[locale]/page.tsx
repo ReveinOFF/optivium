@@ -1,12 +1,12 @@
 "use server";
 
-import { getTranslations } from "next-intl/server";
-import AboutUsClient from "./about.client";
-import { headers } from "next/headers";
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { headers } from "next/headers";
+import HomeClient from "./home.client";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("AboutUs");
+  const t = await getTranslations("Main");
   const pathname = (await headers()).get("x-pathname") as string;
 
   return {
@@ -30,13 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
       index: true,
       follow: true,
     },
-
-    alternates: {
-      canonical: process.env.SITE_URL + pathname,
-    },
   };
 }
 
-export default async function AboutUs() {
-  return <AboutUsClient />;
+export default async function Home() {
+  return <HomeClient />;
 }

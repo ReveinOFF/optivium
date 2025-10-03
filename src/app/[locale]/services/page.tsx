@@ -1,14 +1,11 @@
 "use server";
 
-import { getUserLocale } from "@/services/locale";
-import ContactsClient from "./contacts.client";
 import { getTranslations } from "next-intl/server";
-import { headers } from "next/headers";
+import ServicesClient from "./services.client";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("Contacts");
-  const pathname = (await headers()).get("x-pathname") as string;
+  const t = await getTranslations("Services");
 
   return {
     title: t("meta.title"),
@@ -18,7 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("meta.title"),
       description: t("meta.description"),
       type: "website",
-      url: process.env.SITE_URL + pathname,
     },
 
     twitter: {
@@ -31,15 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
       index: true,
       follow: true,
     },
-
-    alternates: {
-      canonical: process.env.SITE_URL + pathname,
-    },
   };
 }
 
-export default async function Contacts() {
-  const lang = await getUserLocale();
-
-  return <ContactsClient lang={lang} />;
+export default async function Services() {
+  return <ServicesClient />;
 }

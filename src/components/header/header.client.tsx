@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Optivium from "../optivium/optivium";
 import useLang from "@/hooks/useLang";
 import { useEffect, useMemo, useRef, useState } from "react";

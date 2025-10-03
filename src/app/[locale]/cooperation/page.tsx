@@ -1,13 +1,11 @@
 "use server";
 
 import { getTranslations } from "next-intl/server";
-import ServicesClient from "./services.client";
+import CooperationClient from "./cooperation.client";
 import { Metadata } from "next";
-import { headers } from "next/headers";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("Services");
-  const pathname = (await headers()).get("x-pathname") as string;
+  const t = await getTranslations("Cooperation");
 
   return {
     title: t("meta.title"),
@@ -17,7 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("meta.title"),
       description: t("meta.description"),
       type: "website",
-      url: process.env.SITE_URL + pathname,
     },
 
     twitter: {
@@ -30,13 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
       index: true,
       follow: true,
     },
-
-    alternates: {
-      canonical: process.env.SITE_URL + pathname,
-    },
   };
 }
 
-export default async function Services() {
-  return <ServicesClient />;
+export default async function Cooperation() {
+  return <CooperationClient />;
 }

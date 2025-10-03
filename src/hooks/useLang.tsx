@@ -1,20 +1,18 @@
 "use client";
 
-import { setUserLocale } from "@/services/locale";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { LOCALES } from "@/utils/constants";
-import { useTransition } from "react";
 
 export default function useLang() {
-  const [isPending, startTransition] = useTransition();
+  const router = useRouter();
+  const pathname = usePathname();
 
   function changeLang(code: string) {
     const found = LOCALES.find((l) => l.code === code);
     if (!found) return;
 
-    startTransition(() => {
-      setUserLocale(found.code);
-    });
+    router.push(pathname, { locale: code });
   }
 
-  return { isPending, changeLang };
+  return { changeLang };
 }

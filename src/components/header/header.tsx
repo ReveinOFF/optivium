@@ -1,10 +1,7 @@
 "use server";
 
-import { getUserLocale } from "@/services/locale";
 import HeaderClient from "./header.client";
 
-export default async function Header() {
-  const lang = await getUserLocale();
-
-  return <HeaderClient lang={lang} />;
+export default async function Header({ locale }: { locale: string }) {
+  return <HeaderClient lang={locale} />;
 }

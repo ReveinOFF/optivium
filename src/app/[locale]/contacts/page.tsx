@@ -1,13 +1,11 @@
 "use server";
 
+import ContactsClient from "./contacts.client";
 import { getTranslations } from "next-intl/server";
-import CooperationClient from "./cooperation.client";
 import { Metadata } from "next";
-import { headers } from "next/headers";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("Cooperation");
-  const pathname = (await headers()).get("x-pathname") as string;
+  const t = await getTranslations("Contacts");
 
   return {
     title: t("meta.title"),
@@ -17,7 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("meta.title"),
       description: t("meta.description"),
       type: "website",
-      url: process.env.SITE_URL + pathname,
     },
 
     twitter: {
@@ -30,13 +27,16 @@ export async function generateMetadata(): Promise<Metadata> {
       index: true,
       follow: true,
     },
-
-    alternates: {
-      canonical: process.env.SITE_URL + pathname,
-    },
   };
 }
 
-export default async function Cooperation() {
-  return <CooperationClient />;
+export default async function Contacts({
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}>) {
+  const { locale } = await params;
+
+  return <ContactsClient lang={locale} />;
 }

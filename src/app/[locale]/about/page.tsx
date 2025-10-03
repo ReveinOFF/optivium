@@ -1,13 +1,11 @@
 "use server";
 
-import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { headers } from "next/headers";
-import HomeClient from "./home.client";
+import AboutUsClient from "./about.client";
+import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("Main");
-  const pathname = (await headers()).get("x-pathname") as string;
+  const t = await getTranslations("AboutUs");
 
   return {
     title: t("meta.title"),
@@ -17,7 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("meta.title"),
       description: t("meta.description"),
       type: "website",
-      url: process.env.SITE_URL + pathname,
     },
 
     twitter: {
@@ -30,13 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
       index: true,
       follow: true,
     },
-
-    alternates: {
-      canonical: process.env.SITE_URL + pathname,
-    },
   };
 }
 
-export default async function Home() {
-  return <HomeClient />;
+export default async function AboutUs() {
+  return <AboutUsClient />;
 }

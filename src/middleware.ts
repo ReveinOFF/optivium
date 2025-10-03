@@ -1,12 +1,31 @@
-import { NextRequest, NextResponse } from "next/server";
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
+import { createNEMO } from "@rescale/nemo";
+import { NextResponse } from "next/server";
 
-export function middleware(req: NextRequest) {
-  const requestHeaders = new Headers(req.headers);
-  requestHeaders.set("x-pathname", req.nextUrl.pathname);
+const intlMiddleware = createMiddleware(routing);
 
-  return NextResponse.next({
-    request: {
-      headers: requestHeaders,
+export default createNEMO({
+  "/:path*": [
+    async (request) => {
+      const intlResponse = await Promise.resolve(intlMiddleware(request));
+
+      if (intlResponse) {
+        intlResponse.headers.set("x-pathname", request.nextUrl.pathname);
+        return intlResponse;
+      }
+
+      const requestHeaders = new Headers(request.headers);
+
+      return NextResponse.next({
+        request: {
+          headers: requestHeaders,
+        },
+      });
     },
-  });
-}
+  ],
+});
+
+export const config = {
+  matcher: "/((?!api/|_next/|assets/|_static|_vercel|[\\w-]+\\.\\w+).*)",
+};
