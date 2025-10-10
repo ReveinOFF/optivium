@@ -10,6 +10,17 @@ export default createNEMO({
     async (request) => {
       const intlResponse = await Promise.resolve(intlMiddleware(request));
 
+      if (
+        intlResponse &&
+        intlResponse.status >= 300 &&
+        intlResponse.status < 400
+      ) {
+        const userAgent = request.headers.get("user-agent") || "";
+        if (userAgent.toLowerCase().includes("googlebot")) {
+          return NextResponse.next();
+        }
+      }
+
       if (intlResponse) {
         intlResponse.headers.set("x-pathname", request.nextUrl.pathname);
         return intlResponse;
