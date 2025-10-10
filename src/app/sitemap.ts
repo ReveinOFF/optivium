@@ -10,15 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const urls: MetadataRoute.Sitemap = [];
 
-  pages.forEach((page) => {
-    urls.push({
-      url: `${process.env.SITE_URL}${page ? "/" + page : ""}`,
-      lastModified: today,
-      changeFrequency: "yearly",
-      priority: page === "" ? 1 : 0.8,
-    });
-  });
-
   LOCALES.forEach((locale) => {
     pages.forEach((page) => {
       urls.push({
