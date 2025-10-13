@@ -12,7 +12,7 @@ export default createNEMO({
 
       if (
         intlResponse &&
-        intlResponse.status >= 300 &&
+        intlResponse.status >= 200 &&
         intlResponse.status < 400
       ) {
         const userAgent = request.headers.get("user-agent") || "";

@@ -68,6 +68,9 @@ export async function generateMetadata({
       "apple-mobile-web-app-capable": "yes",
       "mobile-web-app-capable": "yes",
     },
+    verification: {
+      google: "Rq2up3evqZJNm-G4vlf6wpj_UPRw_D1PMfIwVBkaO4k",
+    },
     alternates: alternates,
   };
 }

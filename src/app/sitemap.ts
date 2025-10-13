@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${process.env.SITE_URL}/${locale.code}${page ? "/" + page : ""}`,
         lastModified: today,
         changeFrequency: "yearly",
-        priority: page === "" ? 1 : 0.8,
+        priority: page === "" ? 0.9 : 0.8,
       });
     });
   });
