@@ -4,7 +4,12 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations("Terms");
 
   return {
@@ -15,6 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("meta.title"),
       description: t("meta.description"),
       type: "website",
+      url: `${process.env.SITE_URL}/${locale}/terms`,
     },
 
     twitter: {
@@ -27,11 +33,56 @@ export async function generateMetadata(): Promise<Metadata> {
       index: true,
       follow: true,
     },
+
+    alternates: {
+      canonical: `${process.env.SITE_URL}/${locale}/terms`,
+      languages: {
+        "x-default": `${process.env.SITE_URL}/en/terms`,
+        uk: `${process.env.SITE_URL}/uk/terms`,
+        ru: `${process.env.SITE_URL}/ru/terms`,
+        pl: `${process.env.SITE_URL}/pl/terms`,
+        en: `${process.env.SITE_URL}/en/terms`,
+      },
+    },
   };
 }
 
-export default async function TermsPolicy() {
+export default async function TermsPolicy({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("Terms");
+
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Optivium",
+          item: `${process.env.SITE_URL}/${locale}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Terms",
+          item: `${process.env.SITE_URL}/${locale}/terms`,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      url: `${process.env.SITE_URL}/${locale}/terms`,
+      name: t("meta.title"),
+      description: t("meta.description"),
+      inLanguage: locale,
+    },
+  ];
 
   return (
     <>
@@ -99,6 +150,13 @@ export default async function TermsPolicy() {
           </li>
         </ul>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
     </>
   );
 }

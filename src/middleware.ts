@@ -38,5 +38,6 @@ export default createNEMO({
 });
 
 export const config = {
-  matcher: "/((?!api/|_next/|assets/|_static|_vercel|[\\w-]+\\.\\w+).*)",
+  matcher:
+    "/((?!api/|_next/|assets/|_static|robots\\.txt|sitemap\\.xml|sitemap/.*|site\\.webmanifest|_vercel|[\\w-]+\\.\\w+).*)",
 };

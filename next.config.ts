@@ -3,7 +3,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' https://maps.googleapis.com https://maps.gstatic.com 'unsafe-inline';
+    script-src 'self' https://maps.googleapis.com https://maps.gstatic.com 'unsafe-inline' 'unsafe-eval';
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     img-src 'self' blob: data: https://maps.gstatic.com https://maps.googleapis.com;
     media-src 'self';

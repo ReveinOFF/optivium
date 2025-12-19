@@ -1,7 +1,7 @@
 {
   "NotFound": {
     "meta": {
-      "title": "Strona nie została znaleziona | Optivium",
+      "title": "Strona nie została znaleziona",
       "description": "Niestety, strona, której szukasz, nie istnieje."
     },
     "content": "Ups. Nie znaleziono strony!",
@@ -66,7 +66,7 @@
   },
   "Contacts": {
     "meta": {
-      "title": "Kontakty | Optivium",
+      "title": "Kontakty",
       "description": "Skontaktuj się z Optivium, aby uzyskać konsultację, nawiązać współpracę lub uzyskać dodatkowe informacje. Jesteśmy dostępni pod numerem telefonu, adresem e-mail oraz w mediach społecznościowych."
     },
 
@@ -98,7 +98,7 @@
   },
   "AboutUs": {
     "meta": {
-      "title": "O nas | Optivium",
+      "title": "O nas",
       "description": "Wprowadzamy innowacje, dostarczamy niezawodne rozwiązania i rozwijamy współpracę międzynarodową, aby zapewnić sukces biznesowy."
     },
 
@@ -140,7 +140,7 @@
   },
   "Cooperation": {
     "meta": {
-      "title": "Współpraca | Optivium",
+      "title": "Współpraca",
       "description": "Jesteśmy otwarci na długoterminową współpracę partnerską i wspólne projekty z firmami z całego świata."
     },
 
@@ -168,7 +168,7 @@
   },
   "Services": {
     "meta": {
-      "title": "Nasze usługi | Optivium",
+      "title": "Nasze usługi",
       "description": "Oferujemy szeroki zakres rozwiązań dla biznesu, w tym rekrutację, sprzedaż, finanse, inwestycje i doradztwo."
     },
 
@@ -252,7 +252,7 @@
   },
   "Terms": {
     "meta": {
-      "title": "Warunki | Optivium",
+      "title": "Warunki",
       "description": "Zapoznaj się z warunkami użytkowania, regulaminem i informacjami prawnymi firmy Optivium."
     },
     "terms_title": "Warunki korzystania",

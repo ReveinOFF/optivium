@@ -2,12 +2,16 @@
 
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { headers } from "next/headers";
 import HomeClient from "./home.client";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
   const t = await getTranslations("Main");
-  const pathname = (await headers()).get("x-pathname") as string;
 
   return {
     title: t("meta.title"),
@@ -17,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("meta.title"),
       description: t("meta.description"),
       type: "website",
-      url: process.env.SITE_URL + pathname,
+      url: `${process.env.SITE_URL}/en`,
     },
 
     twitter: {
@@ -30,9 +34,46 @@ export async function generateMetadata(): Promise<Metadata> {
       index: true,
       follow: true,
     },
+
+    alternates: {
+      canonical: `${process.env.SITE_URL}/${locale}`,
+      languages: {
+        "x-default": `${process.env.SITE_URL}/en`,
+        uk: `${process.env.SITE_URL}/uk`,
+        ru: `${process.env.SITE_URL}/ru`,
+        pl: `${process.env.SITE_URL}/pl`,
+        en: `${process.env.SITE_URL}/en`,
+      },
+    },
   };
 }
 
-export default async function Home() {
-  return <HomeClient />;
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations("Main");
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: `${process.env.SITE_URL}/${locale}`,
+    name: t("meta.title"),
+    description: t("meta.description"),
+    inLanguage: locale,
+  };
+
+  return (
+    <>
+      <HomeClient />;
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+    </>
+  );
 }

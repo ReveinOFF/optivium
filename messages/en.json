@@ -1,7 +1,7 @@
 {
   "NotFound": {
     "meta": {
-      "title": "Page not found | Optivium",
+      "title": "Page not found",
       "description": "Unfortunately, the page you are looking for does not exist."
     },
     "content": "Oops. Page not found!",
@@ -66,7 +66,7 @@
   },
   "Contacts": {
     "meta": {
-      "title": "Contacts | Optivium",
+      "title": "Contacts",
       "description": "Contact Optivium for consultation, cooperation, or additional information. We are available by phone, email, and social media."
     },
 
@@ -98,7 +98,7 @@
   },
   "AboutUs": {
     "meta": {
-      "title": "About us | Optivium",
+      "title": "About us",
       "description": "We implement innovations, provide reliable solutions, and develop international cooperation for successful business."
     },
 
@@ -140,7 +140,7 @@
   },
   "Cooperation": {
     "meta": {
-      "title": "Cooperation | Optivium",
+      "title": "Cooperation",
       "description": "We are open to long-term partnerships and joint projects with companies around the world."
     },
 
@@ -168,7 +168,7 @@
   },
   "Services": {
     "meta": {
-      "title": "Our services | Optivium",
+      "title": "Our services",
       "description": "We offer a wide range of business solutions, including recruiting, sales, finance, investment, and consulting."
     },
 
@@ -252,7 +252,7 @@
   },
   "Terms": {
     "meta": {
-      "title": "Terms & Conditions | Optivium",
+      "title": "Terms & Conditions",
       "description": "Please review Optivium's terms of use, rules, and legal information."
     },
     "terms_title": "Terms & Conditions",
