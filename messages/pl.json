@@ -74,15 +74,17 @@
     "contacts_subtitle": "Skontaktuj się z nami w dogodny dla Ciebie sposób",
 
     "contacts_instagram": "Instagram:",
-    "contacts_phone_ua": "Telefon (Ukraina):",
-    "contacts_phone_pl": "Telefon (Polska):",
     "contacts_email": "E-mail:",
+    "contacts_linkedin": "LinkedIn:",
 
     "contacts_office_ua": "Biuro na Ukrainie",
     "contacts_office_pl": "Biuro w Polsce",
+    "contacts_office_al": "Biuro w Kazachstanie",
+    "contacts_office_bs": "Biuro na Słowacji",
 
     "contacts_working_hours": "Godziny pracy:",
     "contacts_address": "Adres:",
+    "contacts_phone": "Telefon:",
 
     "contacts_schedule_ua": {
       "mon_thu": "Pn–Cz: 9:00 – 18:00",
@@ -92,9 +94,19 @@
       "mon_thu": "Pn–Cz: 9:00 – 18:00",
       "fri": "Pt: 9:00 – 17:00"
     },
+    "contacts_schedule_al": {
+      "mon_thu": "Pn–Cz: 9:00 – 18:00",
+      "fri": "Pt: 9:00 – 17:00"
+    },
+    "contacts_schedule_bs": {
+      "mon_thu": "Pn–Cz: 9:00 – 18:00",
+      "fri": "Pt: 9:00 – 17:00"
+    },
 
     "contacts_address_ua": "ul. Stepana Bandery 19, Równe, obwód rówieński, 33000",
-    "contacts_address_pl": "ul. Powstańców Śląskich 7a, 53-332 Wrocław"
+    "contacts_address_pl": "ul. Powstańców Śląskich 7A, 53-332 Wrocław",
+    "contacts_address_al": "Ałmaty, ul. Tole Bi 286/2",
+    "contacts_address_bs": "Karadžičova 8/A, 821 08 Bratysława"
   },
   "AboutUs": {
     "meta": {

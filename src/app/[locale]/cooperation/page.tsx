@@ -3,6 +3,7 @@
 import { getTranslations } from "next-intl/server";
 import CooperationClient from "./cooperation.client";
 import { Metadata } from "next";
+import { getBaseStructuredData } from "../layout";
 
 export async function generateMetadata({
   params,
@@ -55,44 +56,56 @@ export default async function Cooperation({
   const { locale } = await params;
   const t = await getTranslations("Cooperation");
 
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Optivium",
-          item: `${process.env.SITE_URL}/${locale}`,
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      ...getBaseStructuredData(locale, t("meta.description")),
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Optivium",
+            item: process.env.SITE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Home",
+            item: `${process.env.SITE_URL}/${locale}`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Cooperation",
+            item: `${process.env.SITE_URL}/${locale}/cooperation`,
+          },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        url: `${process.env.SITE_URL}/${locale}/cooperation`,
+        name: t("meta.title"),
+        description: t("meta.description"),
+        inLanguage: locale,
+        isPartOf: {
+          "@type": "WebSite",
+          url: process.env.SITE_URL,
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Cooperation",
-          item: `${process.env.SITE_URL}/${locale}/cooperation`,
-        },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      url: `${process.env.SITE_URL}/${locale}/cooperation`,
-      name: t("meta.title"),
-      description: t("meta.description"),
-      inLanguage: locale,
-    },
-  ];
+      },
+    ],
+  };
 
   return (
     <>
-      <CooperationClient />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
         }}
       />
+      <CooperationClient />
     </>
   );
 }

@@ -3,6 +3,7 @@
 import { getTranslations } from "next-intl/server";
 import ServicesClient from "./services.client";
 import { Metadata } from "next";
+import { getBaseStructuredData } from "../layout";
 
 export async function generateMetadata({
   params,
@@ -55,44 +56,56 @@ export default async function Services({
   const { locale } = await params;
   const t = await getTranslations("Services");
 
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Optivium",
-          item: `${process.env.SITE_URL}/${locale}`,
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      ...getBaseStructuredData(locale, t("meta.description")),
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Optivium",
+            item: process.env.SITE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Home",
+            item: `${process.env.SITE_URL}/${locale}`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Services",
+            item: `${process.env.SITE_URL}/${locale}/services`,
+          },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        url: `${process.env.SITE_URL}/${locale}/services`,
+        name: t("meta.title"),
+        description: t("meta.description"),
+        inLanguage: locale,
+        isPartOf: {
+          "@type": "WebSite",
+          url: process.env.SITE_URL,
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Services",
-          item: `${process.env.SITE_URL}/${locale}/services`,
-        },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      url: `${process.env.SITE_URL}/${locale}/services`,
-      name: t("meta.title"),
-      description: t("meta.description"),
-      inLanguage: locale,
-    },
-  ];
+      },
+    ],
+  };
 
   return (
     <>
-      <ServicesClient />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
         }}
       />
+      <ServicesClient />
     </>
   );
 }

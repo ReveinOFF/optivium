@@ -145,7 +145,7 @@ export default function HeaderClient({ lang }: { lang: string }) {
 
       {/* Mobile menu */}
       <div
-        className={`fixed z-10 inset-0 h-[48%] bg-[#031827] text-white text-lg transition-transform duration-300 md:hidden border-b border-b-[#ffffff22] rounded-b-3xl ${
+        className={`fixed z-10 inset-0 h-max bg-[#031827] text-white text-lg transition-transform duration-200 md:hidden border-b border-b-[#ffffff22] rounded-b-3xl ${
           openMenu ? "-translate-y-0" : "-translate-y-[101%]"
         }`}
       >
@@ -196,7 +196,7 @@ export default function HeaderClient({ lang }: { lang: string }) {
         <div className="hr-h"></div>
 
         {/* Языки иконками */}
-        <div className="flex gap-3 mt-5 justify-center">
+        <div className="flex gap-3 mt-5 mb-5 justify-center">
           {LOCALES.map((item, idx) => (
             <button
               key={idx}

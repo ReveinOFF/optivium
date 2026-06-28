@@ -74,15 +74,17 @@
     "contacts_subtitle": "Get in touch with us in any convenient way",
 
     "contacts_instagram": "Instagram:",
-    "contacts_phone_ua": "Phone (Ukraine):",
-    "contacts_phone_pl": "Phone (Poland):",
     "contacts_email": "Email:",
+    "contacts_linkedin": "LinkedIn:",
 
     "contacts_office_ua": "Office in Ukraine",
     "contacts_office_pl": "Office in Poland",
+    "contacts_office_al": "Office in Kazakhstan",
+    "contacts_office_bs": "Office in Slovakia",
 
     "contacts_working_hours": "Working hours:",
     "contacts_address": "Address:",
+    "contacts_phone": "Phone:",
 
     "contacts_schedule_ua": {
       "mon_thu": "Mon–Thu: 9:00 – 18:00",
@@ -92,9 +94,19 @@
       "mon_thu": "Mon–Thu: 9:00 – 18:00",
       "fri": "Fri: 9:00 – 17:00"
     },
+    "contacts_schedule_al": {
+      "mon_thu": "Mon–Thu: 9:00 – 18:00",
+      "fri": "Fri: 9:00 – 17:00"
+    },
+    "contacts_schedule_bs": {
+      "mon_thu": "Mon–Thu: 9:00 – 18:00",
+      "fri": "Fri: 9:00 – 17:00"
+    },
 
-    "contacts_address_ua": "19 Stepana Bandery St., Rivne, Rivne region, 33000",
-    "contacts_address_pl": "7a Powstańców Śląskich St., 53-332 Wrocław"
+    "contacts_address_ua": "19 Stepan Bandera Street, Rivne, Rivne Region, 33000",
+    "contacts_address_pl": "7A Powstańców Śląskich Street, 53-332 Wrocław",
+    "contacts_address_al": "286/2 Tole Bi Street, Almaty",
+    "contacts_address_bs": "Karadžičova 8/A, 821 08 Bratislava"
   },
   "AboutUs": {
     "meta": {

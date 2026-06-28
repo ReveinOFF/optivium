@@ -1,3 +1,5 @@
+"use server";
+
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -22,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     robots: {
-      index: false,
+      index: true,
       follow: false,
     },
   };

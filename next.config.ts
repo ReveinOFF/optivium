@@ -18,8 +18,10 @@ const cspHeader = `
 `;
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["http://localhost:3000"],
-
+  reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
+  htmlLimitedBots: /.*/,
   async headers() {
     return [
       {

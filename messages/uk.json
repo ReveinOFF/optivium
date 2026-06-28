@@ -74,15 +74,17 @@
     "contacts_subtitle": "Зв'яжіться з нами будь-яким зручним способом",
 
     "contacts_instagram": "Instagram:",
-    "contacts_phone_ua": "Телефон (Україна):",
-    "contacts_phone_pl": "Телефон (Польща):",
     "contacts_email": "Ел. пошта:",
+    "contacts_linkedin": "LinkedIn:",
 
     "contacts_office_ua": "Офіс в Україні",
     "contacts_office_pl": "Офіс у Польщі",
+    "contacts_office_al": "Офіс у Казахстані",
+    "contacts_office_bs": "Офіс у Словаччині",
 
     "contacts_working_hours": "Режим роботи:",
     "contacts_address": "Адреса:",
+    "contacts_phone": "Телефон:",
 
     "contacts_schedule_ua": {
       "mon_thu": "Пн–Чт: 9:00 – 18:00",
@@ -92,9 +94,19 @@
       "mon_thu": "Пн–Чт: 9:00 – 18:00",
       "fri": "Пт: 9:00 – 17:00"
     },
+    "contacts_schedule_al": {
+      "mon_thu": "Пн–Чт: 9:00 – 18:00",
+      "fri": "Пт: 9:00 – 17:00"
+    },
+    "contacts_schedule_bs": {
+      "mon_thu": "Пн–Чт: 9:00 – 18:00",
+      "fri": "Пт: 9:00 – 17:00"
+    },
 
     "contacts_address_ua": "вул. Степана Бандери, 19, Рівне, Рівненська область, 33000",
-    "contacts_address_pl": "ul. Powstańców Śląskich 7a, 53-332 Wrocław"
+    "contacts_address_pl": "вул. Повстанців Сілезьких 7A, 53-332 Вроцлав",
+    "contacts_address_al": "Алмати, вул. Толе Бі 286/2",
+    "contacts_address_bs": "Karadžičova 8/A, 821 08 Братислава"
   },
   "AboutUs": {
     "meta": {

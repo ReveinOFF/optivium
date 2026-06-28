@@ -6,6 +6,7 @@ import Footer from "@/components/footer/footer";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Inter, Exo_2 } from "next/font/google";
+import imgOG from "./opengraph-image.jpg";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -54,18 +55,18 @@ export async function generateMetadata({
       siteName: "Optivium",
       locale: locale,
       images: {
-        url: `${process.env.SITE_URL}/assets/images/meta.jpg`,
-        width: 1024,
-        height: 1024,
+        url: imgOG.src,
+        width: imgOG.width,
+        height: imgOG.height,
         alt: "Optivium preview",
       },
       type: "website",
     },
     twitter: {
       images: {
-        url: `${process.env.SITE_URL}/assets/images/meta.jpg`,
-        width: 1024,
-        height: 1024,
+        url: imgOG.src,
+        width: imgOG.width,
+        height: imgOG.height,
         alt: "Optivium preview",
       },
       creator: "ReveinOFF",
@@ -83,6 +84,28 @@ export async function generateMetadata({
   };
 }
 
+export function getBaseStructuredData(locale: string, description: string) {
+  return [
+    {
+      "@type": "WebSite",
+      url: process.env.SITE_URL,
+      name: "Optivium",
+      description: description,
+      inLanguage: locale,
+    },
+    {
+      "@type": "Organization",
+      name: "Optivium",
+      url: process.env.SITE_URL,
+      logo: `${process.env.SITE_URL}/assets/images/meta.jpg`,
+      sameAs: [
+        "https://www.instagram.com/optivium.eu",
+        "https://www.linkedin.com/company/optivium-eu",
+      ],
+    },
+  ];
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -90,31 +113,11 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
-  const t = await getTranslations();
-
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      url: process.env.SITE_URL,
-      name: "Optivium",
-      description: t("Main.meta.description"),
-      inLanguage: locale,
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Optivium",
-      url: process.env.SITE_URL,
-      logo: `${process.env.SITE_URL}/assets/images/meta.jpg`,
-    },
-  ];
 
   return (
     <html lang={locale}>
@@ -126,13 +129,6 @@ export default async function LocaleLayout({
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
       </body>
     </html>
   );

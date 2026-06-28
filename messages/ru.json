@@ -74,15 +74,17 @@
     "contacts_subtitle": "Свяжитесь с нами любым удобным способом",
 
     "contacts_instagram": "Instagram:",
-    "contacts_phone_ua": "Телефон (Украина):",
-    "contacts_phone_pl": "Телефон (Польша):",
     "contacts_email": "Email:",
+    "contacts_linkedin": "LinkedIn:",
 
     "contacts_office_ua": "Офис в Украине",
     "contacts_office_pl": "Офис в Польше",
+    "contacts_office_al": "Офис в Казахстане",
+    "contacts_office_bs": "Офис в Словакии",
 
     "contacts_working_hours": "Режим работы:",
     "contacts_address": "Адрес:",
+    "contacts_phone": "Телефон:",
 
     "contacts_schedule_ua": {
       "mon_thu": "Пн–Чт: 9:00 – 18:00",
@@ -92,9 +94,19 @@
       "mon_thu": "Пн–Чт: 9:00 – 18:00",
       "fri": "Пт: 9:00 – 17:00"
     },
+    "contacts_schedule_al": {
+      "mon_thu": "Пн–Чт: 9:00 – 18:00",
+      "fri": "Пт: 9:00 – 17:00"
+    },
+    "contacts_schedule_bs": {
+      "mon_thu": "Пн–Чт: 9:00 – 18:00",
+      "fri": "Пт: 9:00 – 17:00"
+    },
 
     "contacts_address_ua": "ул. Степана Бандеры, 19, Ровно, Ровненская область, 33000",
-    "contacts_address_pl": "ул. Повстанцев Силезских 7a, 53-332 Вроцлав"
+    "contacts_address_pl": "ул. Повстанцев Силезских 7A, 53-332 Вроцлав",
+    "contacts_address_al": "Алматы, ул. Толе Би 286/2",
+    "contacts_address_bs": "Karadžičova 8/A, 821 08 Братислава"
   },
   "AboutUs": {
     "meta": {

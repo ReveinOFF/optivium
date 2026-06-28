@@ -3,6 +3,7 @@
 import ContactsClient from "./contacts.client";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
+import { getBaseStructuredData } from "../layout";
 
 export async function generateMetadata({
   params,
@@ -56,44 +57,56 @@ export default async function Contacts({
   const { locale } = await params;
   const t = await getTranslations("Contacts");
 
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Optivium",
-          item: `${process.env.SITE_URL}/${locale}`,
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      ...getBaseStructuredData(locale, t("meta.description")),
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Optivium",
+            item: process.env.SITE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Home",
+            item: `${process.env.SITE_URL}/${locale}`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Contacts",
+            item: `${process.env.SITE_URL}/${locale}/contacts`,
+          },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        url: `${process.env.SITE_URL}/${locale}/contacts`,
+        name: t("meta.title"),
+        description: t("meta.description"),
+        inLanguage: locale,
+        isPartOf: {
+          "@type": "WebSite",
+          url: process.env.SITE_URL,
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Contacts",
-          item: `${process.env.SITE_URL}/${locale}/contacts`,
-        },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      url: `${process.env.SITE_URL}/${locale}/contacts`,
-      name: t("meta.title"),
-      description: t("meta.description"),
-      inLanguage: locale,
-    },
-  ];
+      },
+    ],
+  };
 
   return (
     <>
-      <ContactsClient lang={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
         }}
       />
+      <ContactsClient lang={locale} />
     </>
   );
 }
