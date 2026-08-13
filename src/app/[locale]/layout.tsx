@@ -44,7 +44,9 @@ export async function generateMetadata({
         { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
         { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
       ],
-      apple: "/apple-touch-icon.png",
+      apple: [
+        { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      ],
     },
     applicationName: "Optivium",
     appleWebApp: {

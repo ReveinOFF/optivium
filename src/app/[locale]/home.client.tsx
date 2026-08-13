@@ -9,109 +9,129 @@ export default function HomeClient() {
 
   return (
     <>
-      <section className="py-10 bg-[#031827] rounded-br-3xl rounded-bl-3xl mx-2.5">
-        <div className="container grid lg:grid-cols-2 gap-12 items-center">
+      <section className="py-16 md:py-20 bg-[#031827] rounded-br-[3rem] rounded-bl-[3rem] mx-2.5 shadow-xl relative overflow-hidden">
+        <div className="container px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
           <div className="text-center md:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl font-bold mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-white leading-tight"
             >
               {t("hero_title")}
             </motion.h1>
-            <p className="text-lg text-gray-300 mb-8">{t("hero_subtitle")}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed"
+            >
+              {t("hero_subtitle")}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            >
               <Link
                 href="/services"
-                className="px-6 py-3 rounded-xl bg-[#9ADE20] hover:bg-green-600 font-semibold text-center"
+                className="px-8 py-3.5 rounded-full bg-[#9ADE20] text-[#000F1B] hover:bg-[#A9E340] active:scale-95 font-bold text-center transition-all duration-300 shadow-lg hover:shadow-[#9ADE20]/20"
               >
                 {t("hero_button_services")}
               </Link>
+
               <Link
                 href="/contacts"
-                className="px-6 py-3 rounded-xl border border-[#9ADE20] hover:bg-green-900 font-semibold text-center"
+                className="px-8 py-3.5 rounded-full border-2 border-[#9ADE20] text-white hover:bg-[#9ADE20]/10 hover:border-[#A9E340] active:scale-95 font-semibold text-center transition-all duration-300"
               >
                 {t("hero_button_contact")}
               </Link>
-            </div>
+            </motion.div>
           </div>
+
           <motion.img
             src="/assets/images/main.jpg"
             alt="Hero Illustration"
-            className="rounded-2xl shadow-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            className="rounded-3xl shadow-2xl border-4 border-[#052034]/60 object-cover w-full h-[380px] md:h-[420px]"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             draggable={false}
           />
         </div>
       </section>
 
-      <section className="container py-10 text-center">
-        <h2 className="text-3xl font-bold mb-12">
+      <section className="container px-4 py-16 text-center">
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-12 text-white tracking-tight">
           {t("features_section_title")}
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-[#031827] rounded-2xl p-6 shadow-md">
-            <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
-              {t("feature_innovation_title")}
-            </h3>
-            <p className="text-gray-300 text-sm">
-              {t("feature_innovation_text")}
-            </p>
-          </div>
-          <div className="bg-[#031827] rounded-2xl p-6 shadow-md">
-            <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
-              {t("feature_reliability_title")}
-            </h3>
-            <p className="text-gray-300 text-sm">
-              {t("feature_reliability_text")}
-            </p>
-          </div>
-          <div className="bg-[#031827] rounded-2xl p-6 shadow-md">
-            <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
-              {t("feature_flexibility_title")}
-            </h3>
-            <p className="text-gray-300 text-sm">
-              {t("feature_flexibility_text")}
-            </p>
-          </div>
-          <div className="bg-[#031827] rounded-2xl p-6 shadow-md">
-            <h3 className="font-semibold text-xl mb-2 text-[#9ADE20]">
-              {t("feature_international_title")}
-            </h3>
-            <p className="text-gray-300 text-sm">
-              {t("feature_international_text")}
-            </p>
-          </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              titleKey: "feature_innovation_title",
+              textKey: "feature_innovation_text",
+            },
+            {
+              titleKey: "feature_reliability_title",
+              textKey: "feature_reliability_text",
+            },
+            {
+              titleKey: "feature_flexibility_title",
+              textKey: "feature_flexibility_text",
+            },
+            {
+              titleKey: "feature_international_title",
+              textKey: "feature_international_text",
+            },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-[#031827] border border-[#052034] hover:border-l-4 hover:border-l-[#9ADE20] hover:border-[#052034] rounded-2xl p-6 shadow-xl transition-all duration-300 hover:-translate-y-1.5 text-left flex flex-col justify-between"
+            >
+              <div>
+                <h3 className="font-bold text-xl mb-3 text-[#9ADE20]">
+                  {t(item.titleKey)}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {t(item.textKey)}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="py-10 bg-[#031827] rounded-3xl mx-2.5">
-        <div className="container">
-          <h2 className="text-3xl font-bold mb-12 text-center">
+      <section className="py-16 bg-[#031827] rounded-3xl mx-2.5 shadow-xl border border-[#052034]">
+        <div className="container px-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-12 text-center text-white tracking-tight">
             {t("advantages_section_title")}
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">{t("advantage_team")}</p>
-            </div>
-            <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">{t("advantage_support")}</p>
-            </div>
-            <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">{t("advantage_custom")}</p>
-            </div>
-            <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">{t("advantage_technology")}</p>
-            </div>
-            <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">{t("advantage_longterm")}</p>
-            </div>
-            <div className="bg-[#061422] rounded-2xl p-6 shadow-md">
-              <p className="text-gray-300">{t("advantage_reliability")}</p>
-            </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "advantage_team",
+              "advantage_support",
+              "advantage_custom",
+              "advantage_technology",
+              "advantage_longterm",
+              "advantage_reliability",
+            ].map((key, index) => (
+              <div
+                key={key}
+                className="bg-[#052034]/70 border border-[#0A2E4A] hover:border-[#9ADE20]/40 rounded-2xl p-6 shadow-md transition-all duration-300 flex items-start space-x-4 hover:-translate-y-1"
+              >
+                <div className="w-8 h-8 rounded-full bg-[#9ADE20]/10 text-[#9ADE20] flex items-center justify-center font-bold text-sm flex-shrink-0 -mt-1 border border-[#9ADE20]/20">
+                  {index + 1}
+                </div>
+                <p className="text-gray-200 text-sm md:text-base leading-relaxed font-medium">
+                  {t(key)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -6,7 +6,19 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: [],
+        disallow: ["/_next/", "/*?*"],
+      },
+      {
+        userAgent: "GPTBot",
+        disallow: "/",
+      },
+      {
+        userAgent: "ChatGPT-User",
+        disallow: "/",
+      },
+      {
+        userAgent: "PerplexityBot",
+        disallow: "/",
       },
     ],
     sitemap: `${process.env.SITE_URL}/sitemap.xml`,
