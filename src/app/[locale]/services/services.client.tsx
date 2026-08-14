@@ -55,7 +55,7 @@ export default function ServicesClient() {
               draggable={false}
             />
             <div className="absolute -bottom-8 -left-3 md:-left-8 bg-[#9ADE20] text-[#031827] p-5 rounded-2xl shadow-lg font-bold">
-              10+ лет опыта
+              {t("services_78")}
             </div>
           </motion.div>
         </div>
