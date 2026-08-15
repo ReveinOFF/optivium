@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="grid gap-1">
           <Link
             href="/terms"
-            className="text-[1.1rem] text-white not-hover:opacity-80 hover:text-[#9ADE20] hover:opacity-100"
+            className="text-[1.1rem] text-center text-white not-hover:opacity-80 hover:text-[#9ADE20] hover:opacity-100"
           >
             {t("terms")}
           </Link>

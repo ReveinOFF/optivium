@@ -9,7 +9,7 @@ export default function CooperationClient() {
 
   return (
     <>
-      <section className="py-16 md:py-20 bg-[#031827] rounded-br-[3rem] rounded-bl-[3rem] mx-2.5 shadow-xl relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-[#031827] rounded-br-[3rem] rounded-bl-[3rem] mx-2.5 shadow-xl relative overflow-hidden z-1">
         <div className="container px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
           <div className="text-center md:text-left">
             <motion.h1

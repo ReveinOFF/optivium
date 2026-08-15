@@ -17,7 +17,9 @@ export default function ContactsClient({ lang }: { lang: string }) {
     <>
       <section className="bg-[#031827] text-center grid gap-2 py-4 rounded-br-3xl rounded-bl-3xl mx-2.5">
         <h1 className="content">{t("contacts_title")}</h1>
-        <p className="title max-w-[700px] mx-auto">{t("contacts_subtitle")}</p>
+        <p className="title max-w-[700px] px-2 mx-auto">
+          {t("contacts_subtitle")}
+        </p>
       </section>
 
       <section className="mt-2.5 bg-[#031827] p-10 rounded-3xl mx-2.5">
